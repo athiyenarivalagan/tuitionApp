@@ -1,0 +1,16 @@
+/* login form */
+form {
+  margin: 200px auto;
+  width: 50%;
+}
+
+img {
+  height: 200px;
+}
+.clicky {
+  margin-top: 15px;
+}
+
+.remember-box {
+  margin-top: 10px;
+}
