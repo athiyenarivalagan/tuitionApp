@@ -1,0 +1,66 @@
+h4 {
+    color: blue;
+    margin: 3px 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+h6 {
+    text-decoration: underline;
+    color: green;
+}
+
+.checked {
+    color: orange;
+}
+
+footer {
+    position:relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0 5px;
+    background-color: aliceblue;
+    color: black;
+    text-align:left;
+    margin-top: 5px;
+}
+
+.container1 {
+    border: 2px solid black;
+    background-color: white;
+    margin: 2px 20px;
+    box-sizing: border-box;
+    float:left;
+    width: 85%;
+    padding: 0 10px;
+    position: relative;
+}
+
+.container1 span {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.box1 {
+    margin: 3px 10px;
+    box-sizing: border-box;
+    float: left;
+    width: 85%;
+    padding: 0 10px;
+    text-align:justify;
+    position: relative;
+}
+
+/* Create three equal columns that floats next to each other */
+.column1 {
+    float: left;
+    width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row1:after {
+    content: "";
+    display: table;
+    clear: both;
+}
