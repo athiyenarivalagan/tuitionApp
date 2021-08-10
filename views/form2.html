@@ -9,35 +9,43 @@
     <title>Document</title>
 </head>
 <body>
-<!-- Variables needed: Name, Subject, subject level, price range and location -->
+
 <div class="mx-auto mt-3" style="width: 300px;">
     <form action="" class="text-center">
         <h2 class="text-center">Please enter and submit your details</h2>
-
+        <!-- Name -->
         <div>
             <label for="Name">Name:</label>        
             <br>
             <input type="text" placeholder="Name" id="Name">
         </div>
 
+        <!-- Subject -->
         <div>
             <label for="Subject">Subject:</label>
             <br>
             <input type="text" placeholder="Subject"  id="Subject">
         </div>
 
+       <!-- Education Level -->
        <div>
             <label for="EducationLevel">Education Level:</label>
             <br>
-            <input type="text" placeholder="Education Level"  id="EducationLevel">
+            <select name="EducationLevel" id="EducationLevel">
+                <option value="PrimarySchool">Primary School</option>
+                <option value="SecondarySchool">Secondary School</option>
+                <option value="JuniorCollege">Junior College</option>
+            </select>
        </div>
 
+       <!-- Pricing -->
         <div>
             <label for="Pricing">Pricing:</label>
             <br>
             <input type="text" placeholder="Price Range"  id="Pricing">
         </div>
 
+        <!-- Location -->
         <div>
             <label for="Location">Location:</label>
             <br>
