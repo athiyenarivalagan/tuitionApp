@@ -1,4 +1,19 @@
+// function getSelectValue(select1)
+// {
+//   if(select1 ="Primary 1")
+//   {
+//     $("#select2 option[value='"+select1+"']").hide();
+//     //$("#select2 option[value =!'"+select1+"']").show();
+//   }
+// }
 
+// $(document).ready(function() {
+//   $("#layout_select").children('option:gt(0)').hide();
+//   $("#column_select").change(function() {
+//       $("#layout_select").children('option').hide();
+//       $("#layout_select").children("option[value^=" + $(this).val() + "]").show()
+//   })
+// })
 // const grade = [
 // {name:'Primary 1'},
 // {name:'Primary 2'},
