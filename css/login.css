@@ -54,18 +54,3 @@ img {
   background-position: center;
 }
 
-.autocom-box li{
-  display:none;
-}
-
-.search-input.active .autocom-box{
-padding: 5px 8px;
-pointer-events:auto;
-}
-
-.autocom-box li{
-  display:none;
-}
-.search-input.active .autocom-box li{
-  display:block;
-}
