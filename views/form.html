@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+   <!--link to css page-->
+   <link href="../css/login.css" type="text/css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -21,10 +24,44 @@
         </div>
 
         <!-- Subject -->
-        <div>
-            <label for="Subject">Subject:</label>
-            <br>
-            <input type="text" placeholder="Subject"  id="Subject">
+<div class="wrapper">
+    <div class="search-input">
+        <input type="text" placeholder="type">
+        <div class="autocom-box">
+             <li>primary 1</li>
+            <li>secondary 1</li> 
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+        <div class="Grade">
+            <input class="Grade-search" type="text" placeholder="Subject" list="suggestions">
+            <datalist id="suggestions">
+               <option value= "Primary 1"></option>
+               <option value= "Primary 2"></option>
+               <option value= "Primary 3"></option>
+               <option value= "Primary 4"></option>
+               <option value= "Primary 5"></option>
+               <option value= "Primary 6"></option>
+               <option value= "Secondary 1"></option>
+               <option value= "Secondary 2"></option>
+               <option value= "Secondary 3"></option>
+               <option value= "Secondary 4"></option>
+            </datalist>
+            <!-- <div class="suggestions">
+
+            </div> -->
+            <!-- <div class="suggestions">
+             <div>Primary 1</div>   
+             <div>Primary 2</div>
+             <div>Secondary 1</div>
+            </div> -->
         </div>
 
        <!-- Education Level -->
@@ -42,7 +79,11 @@
         <div>
             <label for="Pricing">Pricing:</label>
             <br>
-            <input type="text" placeholder="Price Range"  id="Pricing">
+            <select name="price Range" id="Price Range">
+                <option value="$30 - $40">$30 - $40</option>
+                <option value="$40 - $50">$40 - $50</option>
+                <option value="Above $50">Above $50</option>
+            </select>
         </div>
 
         <!-- Location -->
@@ -58,5 +99,6 @@
   
 <!-- Bootstrap Javascript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+<script src="../app.js"></script>
 </body>
 </html>
