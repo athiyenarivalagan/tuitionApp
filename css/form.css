@@ -1,5 +1,5 @@
 body {
-    background-image: url(../formPic.jpg);
+    /* background-image: url(../formPic.jpg); */
 }
 
 #formDiv {
@@ -9,3 +9,9 @@ body {
     margin-top: 30px;
 }
 
+.Grade { 
+font-size: larger;
+width:10px;
+margin-left: 20px;
+height: 50px;
+}
