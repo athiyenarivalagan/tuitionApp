@@ -1,3 +1,8 @@
 body {
     background-image: url(../formPic.jpg);
+    outline: 5px solid black;
+    width: 300px;
+    margin: auto;
+    margin-top: 30px;
 }
+
