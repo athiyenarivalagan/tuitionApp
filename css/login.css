@@ -17,6 +17,8 @@ img {
 .remember-box {
   margin-top: 10px;
 }
+
+/*Carousel*/
 #myCarousel {
   position:relative;
   height:100vh;
