@@ -1,12 +1,4 @@
-var postList = [
-    {
-        name: "Bob",
-        grade: "Primary",
-        subject: [],
-        price: 2,
-        location: "Woodlands"
-    }
-]
+var postList = []
 
 
 var student_name = document.getElementById("Username")
@@ -16,7 +8,16 @@ var price = document.getElementById("Price_Range")
 var student_location = document.getElementById("studentlocation")
 
 
-// document.getElementById("submit").addEventListener("click", handler9);
-// function handler9() {
-  
-// }
+document.getElementById("submitForm").addEventListener("click", handler9);
+function handler9() {
+  var studentInfo = {
+    name: student_name.value,
+    grade: grade.options[grade.selectedIndex].text,
+    subject: subject.options[subject.selectedIndex].text,
+    price: price.value,
+    location: student_location.value
+  }
+
+  console.log(studentInfo)
+  postList.push(studentInfo);
+}
