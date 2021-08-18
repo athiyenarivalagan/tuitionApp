@@ -27,7 +27,7 @@
            <form action="googleMapsApi.html" class="text-center mt-5">
        
                <div class="form-floating mt-5">
-                   <input type="Name" class="form-control" id="floatingInput" placeholder="name" required>
+                   <input type="Name" class="form-control" id="Username" placeholder="name" required>
                    <label for="floatingInput">Name</label>
              </div>
            
@@ -101,12 +101,12 @@
 
         <!-- Location -->
             <div class="form-floating mt-4 ">
-                <input type="text" class="form-control" id="floatingInput" placeholder="Location" required>
+                <input type="text" class="form-control" id="studentlocation" placeholder="Location" required>
                 <label for="floatingInput">Location</label>
             </div>
            
-       
-        <button class="btn btn-primary mt-4 btn-lg btn-block" type="submit">Submit</button>
+            <button class="btn btn-primary mt-4 btn-lg btn-block" type="submit">Submit</button>
+        <!-- <button onclick="student_card()" class="btn btn-primary mt-4 btn-lg btn-block" type="submit">Submit</button> -->
 
     </form>
    </div> 
@@ -130,6 +130,14 @@
     })
   })    
 });
+</script>
+<script>
+ function student_card()
+ {
+     var s_name = document.getElementById("Username").value;
+     var s_location = document.getElementById("studentlocation").value
+     console.log("i am here");
+ }
 </script>
 
 <script src="../scripts/posts.js"></script>
