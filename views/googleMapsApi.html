@@ -74,7 +74,7 @@
     <script src= "../app.js"></script>
 
     <!--map-->
-    <div id="map" style="width:100%;height:400px;"></div>
+    <div id="map"></div>
     <span id ="result"></span>
 
     <!-- javascript for map api and geocoding api -->
@@ -84,7 +84,7 @@
         function initMap() {
         //document.getElementById("ss").innerHTML = localStorage.getItem("textvalue");
             var map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 11,
+                zoom: 12,
                 center: { lat:1.352083,lng:103.819839 },
             });
             var geocoder = new google.maps.Geocoder();
