@@ -1,0 +1,19 @@
+/*input default styles*/
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.spanFont {
+  color: darkgray;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.priceFont {
+    color:green;
+    font-weight:600;
+    font-size:20px;
+}

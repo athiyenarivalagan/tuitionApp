@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/googleMapsApi.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- css -->
     <title>tutor profile display</title>
 </head>
 
 <body>
     <!-- create tutor profile cards -->
     <!-- should the container have a margin-top or the card should have it? -->
-    <!-- consider making the card as a link -->
+    <!-- consider making the card as a link => when a card is clicked, a modal of the tutor pops up on the google map-->
     <div class="container-fluid mt-2">
         <ul style="list-style-type: none">
             <li class="card_list" id="card_list">
-                <div class="card shadow-sm" style="width: 26rem;">
-                    <di class="card-body">
+
+                <!-- tutor profile 1 -->
+                <!-- create cards automatically when a new tutor registers -->
+                <div class="card shadow-sm" style="width: 26rem">
+                    <div class="card-body">
 
                         <div class="row">
                             <div class="col-md-2">
@@ -34,20 +38,20 @@
                         <div class="tutor-data">
                             <div class="row">
                                 <div class="col-xs-6 col-sm-6 col-md-6">
-                                    <span style="color:darkgray; font-weight:500; font-size:15px">QUALIFICATON</span>
+                                    <span class="spanFont">QUALIFICATON</span>
                                     <p>Tutor Qualification</p>
                                 </div>
                                 <div class="col-xs-6 col-sm-6 col-md-6">
-                                    <span style="color:darkgray; font-weight:500; font-size:15px">SUBJECTS</span>
+                                    <span class="spanFont">SUBJECTS</span>
                                     <p>Sujects Taught</p>
                                 </div>  
                                 <div class="w-100"></div>  
                                 <div class="col-xs-6 col-sm-6 col-md-6">
-                                    <span style="color:darkgray; font-weight:500 ; font-size:15px">PRICE PER SESSION</span>
-                                    <p style="color:green; font-weight:600; font-size:20px ;">Price</p>
+                                    <span class="spanFont">PRICE PER SESSION</span>
+                                    <p class="priceFont">Price</p>
                                 </div>
                                 <div class="col-xs-6 col-sm-6 col-md-6">
-                                    <span style="color:darkgray; font-weight:500 ; font-size:15px">LOCATION</span>
+                                    <span class="spanFont">LOCATION</span>
                                     <p>Tutor Address</p>
                                 </div>
                             </div>
@@ -66,6 +70,6 @@
     
     <!-- javascript -->
     <script src= "https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src= "../app.js"></script>
+    <!-- <script src= "../app.js"></script> -->
 </body>
 </html>
