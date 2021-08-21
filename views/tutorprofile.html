@@ -23,20 +23,25 @@
 <!--End of Header-->
   <!-- <div id="formDiv"> -->
     <div class="container border mx-auto shadow-sm mt-5" style="height: 410px; width: 400px;">
-        <h3 class="form-header text-center">Student Request Form</h3>
+        <h3 class="form-header text-center">Tutor Profile Creation</h3>
            <form action="googleMapsApi.html" class="text-center mt-5">
        
                <div class="form-floating mt-5">
                    <input type="Name" class="form-control" id="Username" placeholder="name" required>
                    <label for="floatingInput">Name</label>
              </div>
-           
 
+             <div class="form-floating mt-5">
+                <input type="text" class="form-control" id="Qualification" placeholder="Qualification" required>
+                <label for="floatingInput">Qualification</label>
+          </div>
+           
+          
         <!-- Subject-->
  
      <div class="Grade form">
         <select name="column_select" id="column_select">
-          <option value="col1">Grade</option>
+          <option value="col1">Grade Taught</option>
           <option value="col1">Primary 1</option>
           <option value="col1">Primary 2</option>
           <option value="col1">Primary 3</option>
@@ -59,7 +64,7 @@
         <select name="layout_select" id="layout_select" class="postInfo">
        
     <!--Below shows when '1 column' is selected is hidden otherwise-->
-          <option value="col1_ms">Subject</option>
+          <option value="col1_ms">Subjects Taught</option>
           <option value="col1_sms">Math</option>
           <option value="col1_smss">Science</option> 
           <option value="col1_smss">English</option> 
@@ -101,11 +106,11 @@
 
         <!-- Location -->
             <div class="form-floating mt-4 ">
-                <input type="text" class="form-control" id="studentlocation" placeholder="Location" required>
+                <input type="text" class="form-control" id="tutorlocation" placeholder="Location" required>
                 <label for="floatingInput">Location</label>
             </div>
            <!--Submit Button-->
-            <button id="submitForm" class="btn btn-primary mt-4 btn-lg btn-block" type="submit">Submit</button>
+            <button id="submitForm" class="btn btn-primary mt-4 btn-lg btn-block" type="submit" onclick="passvalues();">Submit</button>
         <!-- <button onclick="student_card()" class="btn btn-primary mt-4 btn-lg btn-block" type="submit">Submit</button> -->
 
     </form>
@@ -140,15 +145,15 @@
  }
 </script> -->
 
-<!--  <script>
+ <script>
     function passvalues()
     {
-        var address = document.getElementById("studentlocation").value;
+        var address = document.getElementById("tutorlocation").value;
         localStorage.setItem("textvalue",address);
         return false;
     }
 </script> 
- -->
+
 <script src="../scripts/posts.js"></script>
 </body>
 </html>

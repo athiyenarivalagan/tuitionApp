@@ -1,0 +1,4 @@
+We have created a dynamic world map using Maps Javascript Api.The purpose of the map is to display the locations of the registered tutors.
+When a tutor creates a profile,the address provided by the user is geocoded and turned into coordinates which will be converted into markers that will pin and display their location on the map.
+The location will be enetered by the user in the tutor profile creation page.
+That address will then be dispalyed on the map using a marker pin.
