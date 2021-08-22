@@ -1,0 +1,2 @@
+# do not include node_modules folder to keep repo size < 100mb
+node_modules
