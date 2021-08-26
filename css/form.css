@@ -20,3 +20,8 @@ outline-color: gray;
 .btn{
     width: 370px;
 }
+
+#footerRow {
+    margin-top: 5px;
+    width: 500px;
+}
