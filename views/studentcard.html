@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- css -->
+    <title> Student Request</title>
+</head>
+
+<body>
+    <!-- create tutor profile cards -->
+    <!-- should the container have a margin-top or the card should have it? -->
+    <!-- consider making the card as a link -->
+    <div class="container-fluid mt-2">
+        <ul style="list-style-type: none">
+            <li class="card_list" id="card_list">
+                <div class="card shadow-sm" style="width: 26rem;">
+                    <di class="card-body">
+
+                        <div class="row">
+                            <div class="col-md-2">
+                                <img src="../views/images/placeholder.png" width="50px" height="50px" alt="tutor profile picture" class="profile-pic">
+                            </div>
+                            <!-- place text at the center -->
+                            <div class="col-md-10">
+                                <h5 class="card-title">Student name</h5>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="tutor-data">
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <span style="color:darkgray; font-weight:500; font-size:15px">ACADAMIC LEVEL</span>
+                                    <p>GRADE OF STUDENT</p>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <span style="color:darkgray; font-weight:500; font-size:15px">SUBJECT</span>
+                                    <p>Suject Requested</p>
+                                </div>  
+                                <div class="w-100"></div>  
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <span style="color:darkgray; font-weight:500 ; font-size:15px"> PREFFERED PRICE RANGE</span>
+                                    <p style="color:green; font-weight:600; font-size:20px ;">Price</p>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <span style="color:darkgray; font-weight:500 ; font-size:15px"> STUDENT LOCATION</span>
+                                    <p>NEAREST MRT STATION</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- message button -->
+                        <!-- link to message page -->
+                            <a href="#" class="btn btn-primary d-flex justify-content-center">Message</a>
+                        
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    
+    <!-- javascript -->
+    <script src= "https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src= "../app.js"></script>
+</body>
+</html>

@@ -1,13 +1,16 @@
-body {
-    background-image: url(../formPic.jpg);
+.body{
+    background-image: linear-gradient(red, yellow)!important ;
+
 }
 
-#formDiv {
-    outline: 5px solid black;
-    width: 300px;
-    margin-top: 30px;
+.navbar{
+background-color: #388087 !important;
 }
-
+.container{
+    background-color:#BADFE7;
+    border-radius: 25px;
+    padding-top: 30px;
+}
 .Grade { 
 font-size: 20px;
 -ms-grid-row-align: stretch;
