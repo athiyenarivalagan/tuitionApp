@@ -49,136 +49,86 @@
     </button>
 </div> -->
   <!--End of carousel-->
+
   
     <div class="container border mx-auto shadow-sm mt-5" style="height: 500px; width: 400px;">
-
-        <ul class="nav nav-tabs content-justify-center">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="student-menu">Student</a>
+        <!-- tab component -->
+        <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#student-menu" type="button" role="tab" aria-controls="home" aria-selected="true">Student</button>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="tutor-menu">Tutor</a>
-            </li>
-            
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#tutor-menu" type="button" role="tab" aria-controls="profile" aria-selected="false">Tutor</button>
           </ul>
 
 
           <!-- student-form -->
-        <form class="mt-5" id="student-menu">
-            <!-- Email -->
-            <div class="form-floating mb-5">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                <label for="floatingInput">Email address</label>
-            </div>
-
-            <!-- Password -->
-            <div class="form-floating mb-3">
-                <input type="password" minlength="5" class="form-control" id="floatingPassword" placeholder="Password" required>
-                <label for="floatingPassword">Password</label>
-            </div>
-
-            <!-- checkbox to remember -->
-            <input class="form-check-input remember-box" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label remember-box" for="flexCheckDefault">
-                I agree to Terms of Service and Privacy Policy
-            </label>
-
-            <!-- login button -->
-            <div class="button-container mt-5" style="text-align: center;">
-                <button class="btn btn-primary" type="button">Log In</button>
-                <button class="btn btn-primary" type="button">Sign Up</button>
-            </div>
-        </form>
+        <form class="mt-5">
+            <div class="tab-content" id="myTabContent">
 
 
-        <!-- tutor-form -->
-        <form class="mt-5" id="tutor-menu">
-            <!-- Email -->
-            <div class="form-floating mb-5">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                <label for="floatingInput">Email address</label>
-            </div>
+                <div id="student-menu" class="tab-pane fade show active"  role="tabpanel" aria-labelledby="home-tab">
+                    <!-- Email -->
+                    <div class="form-floating mb-5">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                        <label for="floatingInput">Email address</label>
+                    </div>
 
-            <!-- Password -->
-            <div class="form-floating mb-3">
-                <input type="password" minlength="5" class="form-control" id="floatingPassword" placeholder="Password" required>
-                <label for="floatingPassword">Password</label>
-            </div>
+                    <!-- Password -->
+                    <div class="form-floating mb-3">
+                        <input type="password" minlength="5" class="form-control" id="floatingPassword" placeholder="Password" required>
+                        <label for="floatingPassword">Password</label>
+                    </div>
 
-            <!-- checkbox to remember -->
-            <input class="form-check-input remember-box" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label remember-box" for="flexCheckDefault">
-                I agree to Terms of Service and Privacy Policy
-            </label>
+                    <!-- checkbox to remember -->
+                    <input class="form-check-input remember-box" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label remember-box" for="flexCheckDefault">
+                        I agree to Terms of Service and Privacy Policy
+                    </label>
 
-            <!-- login button -->
-            <div class="button-container mt-5" style="text-align: center;">
-                <button class="btn btn-primary" type="button" onclick="accLogin()">Log In</button>
-                <button class="btn btn-primary" type="button" onclick="accLogin()">Sign Up</button>
-            </div>
-        </form>
-    </div>
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <!-- start of footer -->
-    <footer>
-        <div class = "row1">
-            <!-- About Us box -->
-            <div class="column1" >
-                <h4>About Our Application</h4>
-                <div class = "box1">
-                    <p>Our application provides information about the various tutions out there.This app is suitable for everyone regardless of their age or grade.Our app has many features and has good reviews and feedbacks from the users. All the features in the app are fully free and it is easily accessible by all. </p>
+                    <!-- login/sign-up button -->
+                    <div class="button-container mt-5" style="text-align: center;">
+                        <a class="btn btn-primary" href="studentHome.html" role="button">Log in</a>
+                        <a class="btn btn-primary" href="studentCreate.html" role="button">Sign Up</a>
+                    </div>
                 </div>
-            </div>
-            
-            <!--Ratings and Review display box-->
-            <div class="column1" >
-                <h4>Ratings and Reviews</h4>
-                <div class="container1">
-                    <h6><span>J*****e</span></h6>
-                    <span class="fa fa-star checked" ></span>
-                    <span class="fa fa-star checked" ></span>
-                    <span class="fa fa-star checked" ></span>
-                    <span class="fa fa-star checked" ></span>
-                    <span class="fa fa-star checked" ></span>
-                    <p>Text</p>
-                    <p>.......</p>
-                </div>
-                <div class="container1">
-                    <h6><span>M********n</span></h6>
-                    <span class="fa fa-star checked" ></span>
-                    <span class="fa fa-star checked" ></span>
-                    <span class="fa fa-star checked" ></span>
-                    <span class="fa fa-star checked" ></span>
-                    <span class="fa fa-star" ></span>
-                    <p>Text</p>
-                    <p>.......</p>
-                </div>
-            </div>
 
-            <!--Application name and Logo Display-->
-            <div class="column1" >  
-                <h4>Application Name</h4>
-                <div class = "box1">
-                    <p>Logo</p>
+
+
+            <!-- tutor-form -->
+            <div id="tutor-menu" class="tab-pane fade">
+                <!-- Email -->
+                <div class="form-floating mb-5">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                    <label for="floatingInput">Email address</label>
+                </div>
+
+                <!-- Password -->
+                <div class="form-floating mb-3">
+                    <input type="password" minlength="5" class="form-control" id="floatingPassword" placeholder="Password" required>
+                    <label for="floatingPassword">Password</label>
+                </div>
+
+                <!-- checkbox to remember -->
+                <input class="form-check-input remember-box" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label remember-box" for="flexCheckDefault">
+                    I agree to Terms of Service and Privacy Policy
+                </label>
+
+                <!-- login button -->
+                <div class="button-container mt-5" style="text-align: center;">
+                    <a class="btn btn-primary" href="tutorhome.html" role="button">Log in</a>
+                        <a class="btn btn-primary" href="tutorCreate.html" role="button">Sign Up</a>
                 </div>
             </div>
         </div>
-    </footer>   
+    </form>
+</div>
 
+
+
+
+    
     <!-- add scripts -->
     <script src="../scripts/uDatabase.js" type="text/javascript"></script>
     <script src="../scripts/accounts.js" type="text/javascript"></script>
