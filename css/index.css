@@ -67,15 +67,15 @@ footer {
 
 /* icon styling */
 i {
-   color:darkgray; 
+   color:gray; 
 }
 
 /* label styling  */
 label {
-    color: darkgray;
+    color: gray;
 }
 
 /* tab-header styling */
 .nav-link {
-    color: darkgray
+    color: gray
 }
