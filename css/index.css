@@ -64,3 +64,18 @@ footer {
     display: table;
     clear: both;
 }
+
+/* icon styling */
+i {
+   color:darkgray; 
+}
+
+/* label styling  */
+label {
+    color: darkgray;
+}
+
+/* tab-header styling */
+.nav-link {
+    color: darkgray
+}
