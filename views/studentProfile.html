@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="../css/cards.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>student profile display</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../css/googleMapsApi.css">
+    <title> Student Request</title>
 </head>
 
 <body>
@@ -68,5 +70,42 @@
     <!-- javascript -->
     <script src= "https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src= "../app.js"></script>
+
+     <!--map-->
+     <div id="map"></div>
+     <span id ="result"></span>
+ 
+     <!-- javascript for map api and geocoding api -->
+     <script>
+ 
+         //initialize the map
+         function initMap() {
+         //document.getElementById("ss").innerHTML = localStorage.getItem("textvalue");
+             var map = new google.maps.Map(document.getElementById("map"), {
+                 zoom: 12,
+                 center: { lat:1.352083,lng:103.819839 },
+             });
+             var geocoder = new google.maps.Geocoder();
+             geocodeAddress(geocoder, map);
+         }
+ 
+         //geocode the address 
+         function geocodeAddress(geocoder, resultsMap) {
+             var address = localStorage.getItem("textvalue");
+             geocoder
+             .geocode({ address: address })
+             .then(({ results }) => {
+                 resultsMap.setCenter(results[0].geometry.location);
+                 new google.maps.Marker({
+                     map: resultsMap,
+                      position: results[0].geometry.location,
+                 });
+             })
+         }
+     </script>
+ 
+ <!--Maps Api script-->
+ <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpsU6ailc5cINO7THGgJq7mVv8uGBfGw4&callback=initMap&libraries=&v=weekly" async></script>
+
 </body>
 </html>
