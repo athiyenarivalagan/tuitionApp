@@ -1,4 +1,4 @@
- .btn{
+ #btn{
     color:black;
     text-align:center;
     /* background-color:mediumturquoise;
@@ -10,6 +10,8 @@
     width:900px !important;
     padding-top: 110px;
     font-size: 50px;    */
+    text-align: center !important;
+    text-decoration: underline;
 } 
 
 .btn:hover{
