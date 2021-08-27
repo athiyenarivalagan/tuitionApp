@@ -22,19 +22,19 @@
  </nav>
 <!--End of Header-->
   <!-- <div id="formDiv"> -->
-    <div class="container border mx-auto shadow-sm mt-5" style="height: 410px; width: 400px;">
+    <div class="container border mx-auto shadow-sm mt-5" id="tutorForm">
         <h3 class="form-header text-center">Tutor Profile Creation</h3>
            <form action="studentProfile.html" class="text-center mt-5">
        
                <div class="form-floating mt-5">
                    <input type="Name" class="form-control" id="Username" placeholder="name" required>
                    <label for="floatingInput">Name</label>
-             </div>
+               </div>
 
              <div class="form-floating mt-5">
                 <input type="text" class="form-control" id="Qualification" placeholder="Qualification" required>
                 <label for="floatingInput">Qualification</label>
-          </div>
+             </div>
            
           
         <!-- Subject-->
@@ -88,22 +88,22 @@
          <option value="col3_sms">H2 Chemistry</option> 
         <option value="col3_sms">H2 Physics</option> 
 
-      </select>
-   </div>
+        </select>
+     </div>
        <!-- Pricing -->
         <div class=" Grade mt-4 ">
              <!-- <select name="price Range" id="Price Range"> -->
                 
-        <div class="mt-2">
-            <label for="Pricing">Price Range:</label>
-            <br>
-            <select name="price Range" id="Price_Range" class="postInfo">
-                <option value="$30 - $40">$30 - $40</option>
-                <option value="$40 - $50">$40 - $50</option>
-                <option value="Above $50">Above $50</option>
-            </select>
+          <div class="mt-2">
+              <label for="Pricing">Price Range:</label>
+              <br>
+              <select name="price Range" id="Price_Range" class="postInfo">
+                  <option value="$30 - $40">$30 - $40</option>
+                  <option value="$40 - $50">$40 - $50</option>
+                  <option value="Above $50">Above $50</option>
+              </select>
+          </div>
         </div>
-
         <!-- Location -->
             <div class="form-floating mt-4 ">
                 <input type="text" class="form-control" id="tutorlocation" placeholder="Location" required>
@@ -118,7 +118,8 @@
 
 <!-- footer -->
 <div id="footerRow">
-    <footer class="container py-5">
+    <!-- <footer class="container py-5"> -->
+    <footer>
         <div class="row">
           <!-- <div class="col-12 col-md">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mb-2"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
@@ -135,6 +136,7 @@
               <li><a class="text-muted" href="#">Last time</a></li>
             </ul>
           </div>
+          
           <div class="col-6 col-md">
             <h5>Social Media</h5>
             <ul class="list-unstyled text-small">
