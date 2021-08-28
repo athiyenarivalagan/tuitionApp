@@ -1,3 +1,11 @@
+ /* tab-header styling */
+.nav-link {
+    color:blue !important;
+}
+.navbar-example2{
+    background-color: coral;
+}
+ 
  .btn{
     color:black;
     padding:70px;
@@ -16,4 +24,11 @@ h1{
     text-align: center;
     text-decoration: none;
     margin-bottom: 20px;
+}
+
+#footerRow {
+    text-align: center;
+    margin-top: 100px;
+    background-color:#Badfe7;
+    width: auto;
 }
