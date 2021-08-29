@@ -1,13 +1,3 @@
-/* #background{
-  /* background-image: linear-gradient(#C2Edce,#Badfe7) !important;  
- height: 900px; */
-
-
-} */
-.navbar{
-background-color: #388087 !important;
-
-}
 .container{
     background-color:#Badfe7;
     /* background-color:#FAF6F2; */
@@ -17,8 +7,6 @@ background-color: #388087 !important;
 
     /* position: relative; */
 }
-
-
 
 .Grade { 
 font-size: 20px;
@@ -35,11 +23,4 @@ outline-color: gray;
 
 .btn{
     width: 370px;
-}
-
-#footerRow {
-    text-align: center;
-    margin-top: 100px;
-    background-color:#Badfe7;
-    width: auto;
 }

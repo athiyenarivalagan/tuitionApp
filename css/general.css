@@ -1,0 +1,22 @@
+/* header */
+#header {
+    background-color: #Badfe7 !important;
+}
+
+#logo {
+    height: 50px;
+    width: 50px;
+}
+
+#navTitle {
+    float: right;
+}
+
+/* footer */
+
+#footerRow {
+    text-align: center;
+    margin-top: 100px;
+    background-color:#Badfe7;
+    width: auto;
+}

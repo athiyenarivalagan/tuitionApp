@@ -10,8 +10,6 @@ ELECTRON USE:
 Commands to test via electron: 
 open a terminal/cmdprompt in the project folder
 1) npm install --save-dev electron
-2) npm install --save-dev sqlite3
-(there will be vulnerability notifications regarding older files etc popping up but sqlite will be installed, just ignore it as sqlite3 is not fully compatible with newer versions of electron.)
-4) npm start
+2) npm start
 
-The configurations are already done in main.js and git pushes will not include the node_modules folder that consist of electron and sqlite (due to file size limit). 
+The configurations are already done in main.js and git pushes will not include the node_modules folder that consist of electron (due to file size limit). 

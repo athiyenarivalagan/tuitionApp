@@ -14,7 +14,7 @@ h6 {
     color: orange;
 }
 
-footer {
+/* footer {
     position:relative;
     left: 0;
     bottom: 0;
@@ -24,7 +24,7 @@ footer {
     color: black;
     text-align:left;
     margin-top: 5px;
-}
+} */
 
 .container1 {
     border: 2px solid black;
@@ -79,3 +79,30 @@ label {
 .nav-link {
     color: gray
 }
+
+body, html {
+    height: 100%;
+    margin: 0;
+    }
+
+    /* * {
+        box-sizing: border-box;
+    } */
+    
+    .bg {
+    /* The image used */
+    background-image: url("../views/images/carousel3.jpg");
+    
+    /* Full height */
+    height: 100%;
+    
+    /* Add the blur effect */
+    /* backdrop-filter: blur(8px);
+    -webkit-filter: blur(8px); */
+    
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* position: relative; */
+    }
