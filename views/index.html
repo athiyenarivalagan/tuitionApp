@@ -25,125 +25,123 @@
 
     <!-- background image -->
     <div class="bg">
-        <!-- form-container -->
-        <!-- <div class="position-relative"> -->
-            <div class="container border mx-auto shadow-sm mt-5 position-absolute top-50 start-50 translate-middle" style="height: 500px; width: 400px; background-color: white;">
-                <!-- tab component -->
-                <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#student-menu" type="button" role="tab" aria-controls="home" aria-selected="true">Student</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#tutor-menu" type="button" role="tab" aria-controls="profile" aria-selected="false">Tutor</button>
-                </ul>
+            <!-- form-container -->
+        <div class="container border mx-auto shadow-sm mt-5 position-absolute top-50 start-50 translate-middle" style="height: 500px; width: 400px; background-color: white;">
+            <!-- tab component -->
+            <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#student-menu" type="button" role="tab" aria-controls="home" aria-selected="true">Student</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#tutor-menu" type="button" role="tab" aria-controls="profile" aria-selected="false">Tutor</button>
+            </ul>
 
 
-                <!-- form -->
-                <!-- fix validation issue-->
-                <!-- consider refactoring -->
-                <form class="mt-4 ps-5 pe-5">
-                    <div class="tab-content" id="myTabContent">
+            <!-- form -->
+            <!-- fix validation issue-->
+            <!-- consider refactoring -->
+            <form class="mt-4 ps-5 pe-5">
+                <div class="tab-content" id="myTabContent">
 
-                        <!-- student-form -->
-                        <div id="student-menu" class="tab-pane fade show active"  role="tabpanel" aria-labelledby="home-tab">
-                            <!-- Email -->
-                            <div class="form-floating mb-3">
-                                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                                <label for="floatingInput"><i class="fas fa-envelope pe-3"></i>Email address</label>
-                            </div>
-
-                            <!-- Password -->
-                            <div class="form-floating mb-3">
-                                <input type="password" minlength="5" class="form-control" id="floatingPassword" placeholder="Password" required>
-                                <label for="floatingPassword"><i class="fas fa-lock pe-3"></i>Password</label>
-                            </div>
-
-                            <!-- checkbox to remember -->
-                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                            <label class="form-check-label" style="font-size: 13px;" for="invalidCheck">
-                                I agree to Terms of Service and Privacy Policy
-                            </label>
-                            <div class="invalid-feedback">
-                                You must agree before submitting
-                            </div>
-
-                            <!-- login/sign-up button -->
-                            <!-- have inserted the type submit -->
-                            <div class="button-container mt-5">
-                                <div class="d-grid">
-                                    <a class="btn btn-success shadow-sm mb-2" href="sHome.html" role="button" type="submit">Log in</a>
-                                    <label class="mx-auto mb-2" style="font-size: 13px;">or</label>
-                                    <!-- modify the isgn up link -->
-                                    <a class="btn btn-primary shadow-sm" href="" role="button" typle="submit">Sign Up</a>
-                                </div>
-                            </div>
+                    <!-- student-form -->
+                    <div id="student-menu" class="tab-pane fade show active"  role="tabpanel" aria-labelledby="home-tab">
+                        <!-- Email -->
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                            <label for="floatingInput"><i class="fas fa-envelope pe-3"></i>Email address</label>
                         </div>
 
+                        <!-- Password -->
+                        <div class="form-floating mb-3">
+                            <input type="password" minlength="5" class="form-control" id="floatingPassword" placeholder="Password" required>
+                            <label for="floatingPassword"><i class="fas fa-lock pe-3"></i>Password</label>
+                        </div>
 
-                        <!-- tutor-form -->
-                        <div id="tutor-menu" class="tab-pane fade">
-                            <!-- Email -->
-                            <div class="form-floating mb-3">
-                                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                                <label for="floatingInput"><i class="fas fa-envelope pe-3"></i>Email Address</label>
-                            </div>
+                        <!-- checkbox to remember -->
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label" style="font-size: 13px;" for="invalidCheck">
+                            I agree to Terms of Service and Privacy Policy
+                        </label>
+                        <div class="invalid-feedback">
+                            You must agree before submitting
+                        </div>
 
-                            <!-- Password -->
-                            <div class="form-floating mb-3">
-                                <input type="password" minlength="5" class="form-control" id="floatingPassword" placeholder="Password" required>
-                                <label for="floatingPassword"><i class="fas fa-lock pe-3"></i>Password</label>
-                            </div>
-
-                            <!-- checkbox to remember -->
-                            <input class="form-check-input remember-box" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label remember-box" style="font-size: 13px;" for="flexCheckDefault">
-                                I agree to Terms of Service and Privacy Policy
-                            </label>
-
-                            <!-- log in/sign up buttons -->
-                            <div class="button-container mt-5">
-                                <div class="d-grid">
-                                    <a class="btn btn-success shadow-sm mb-2" href="tHome.html" role="button" type="submit">Log in</a>
-                                    <label class="mx-auto mb-2" style="font-size: 13px;">or</label>
-                                    <a class="btn btn-primary shadow-sm" href="" role="button" type="submit">Sign Up</a>
-                                </div>
+                        <!-- login/sign-up button -->
+                        <!-- have inserted the type submit -->
+                        <div class="button-container mt-5">
+                            <div class="d-grid">
+                                <a class="btn btn-success shadow-sm mb-2" href="sHome.html" role="button" type="submit">Log in</a>
+                                <label class="mx-auto mb-2" style="font-size: 13px;">or</label>
+                                <!-- modify the isgn up link -->
+                                <a class="btn btn-primary shadow-sm" href="" role="button" typle="submit">Sign Up</a>
                             </div>
                         </div>
                     </div>
-                </form>
-            </div>
 
-            <!-- start of background-image styling -->
-            <style>
-                body, html {
-                height: 100%;
-                margin: 0;
-                }
 
-                /* * {
-                    box-sizing: border-box;
-                } */
-                
-                .bg {
-                /* The image used */
-                background-image: url("../views/images/carousel3.jpg");
-                
-                /* Full height */
-                height: 100%;
-                
-                /* Add the blur effect */
-                /* backdrop-filter: blur(8px);
-                -webkit-filter: blur(8px); */
-                
-                /* Center and scale the image nicely */
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                /* position: relative; */
-                }
-            </style>
-            <!-- end of background-image styling-->
+                    <!-- tutor-form -->
+                    <div id="tutor-menu" class="tab-pane fade">
+                        <!-- Email -->
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                            <label for="floatingInput"><i class="fas fa-envelope pe-3"></i>Email Address</label>
+                        </div>
+
+                        <!-- Password -->
+                        <div class="form-floating mb-3">
+                            <input type="password" minlength="5" class="form-control" id="floatingPassword" placeholder="Password" required>
+                            <label for="floatingPassword"><i class="fas fa-lock pe-3"></i>Password</label>
+                        </div>
+
+                        <!-- checkbox to remember -->
+                        <input class="form-check-input remember-box" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label remember-box" style="font-size: 13px;" for="flexCheckDefault">
+                            I agree to Terms of Service and Privacy Policy
+                        </label>
+
+                        <!-- log in/sign up buttons -->
+                        <div class="button-container mt-5">
+                            <div class="d-grid">
+                                <a class="btn btn-success shadow-sm mb-2" href="tHome.html" role="button" type="submit">Log in</a>
+                                <label class="mx-auto mb-2" style="font-size: 13px;">or</label>
+                                <a class="btn btn-primary shadow-sm" href="#" role="button" type="submit">Sign Up</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
+
+        <!-- start of background-image styling -->
+        <style>
+            body, html {
+            height: 100%;
+            margin: 0;
+            }
+
+            /* * {
+                box-sizing: border-box;
+            } */
+            
+            .bg {
+            /* The image used */
+            background-image: url("../views/images/carousel3.jpg");
+            
+            /* Full height */
+            height: 100%;
+            
+            /* Add the blur effect */
+            /* backdrop-filter: blur(8px);
+            -webkit-filter: blur(8px); */
+            
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* position: relative; */
+            }
+        </style>
+    </div>
 
 
 
