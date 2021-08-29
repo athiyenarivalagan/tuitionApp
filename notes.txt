@@ -1,0 +1,17 @@
+MAP PROCESS:
+------------
+We have created a dynamic world map using Maps Javascript Api.The purpose of the map is to display the locations of the registered tutors.
+When a tutor creates a profile,the address provided by the user is geocoded and turned into coordinates which will be converted into markers that will pin and display their location on the map.
+The location will be enetered by the user in the tutor profile creation page.
+That address will then be dispalyed on the map using a marker pin.
+
+ELECTRON USE:
+-------------
+Commands to test via electron: 
+open a terminal/cmdprompt in the project folder
+1) npm install --save-dev electron
+2) npm install --save-dev sqlite3
+(there will be vulnerability notifications regarding older files etc popping up but sqlite will be installed, just ignore it as sqlite3 is not fully compatible with newer versions of electron.)
+4) npm start
+
+The configurations are already done in main.js and git pushes will not include the node_modules folder that consist of electron and sqlite (due to file size limit). 

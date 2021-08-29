@@ -8,17 +8,23 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
    <!--link to css page-->
-   <link href="../css/form.css" type="text/css" rel="stylesheet">
-  
+   <!-- <link href="../css/form.css" type="text/css" rel="stylesheet">
+   -->
 
 
     <title>Document</title>
 </head>
 <body>
-
-    <div class="container border mx-auto shadow-sm mt-5" style="height: 470px; width: 400px;">
+ <!--Heading bar--> 
+ <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
+    <h3>Tuition App</h3>
+    <h5>Your one stop solution for tuition</h5>
+ </nav>
+<!--End of Header-->
+  <!-- <div id="formDiv"> -->
+    <div class="container border mx-auto shadow-sm mt-5" style="height: 410px; width: 400px;">
         <h3 class="form-header text-center">Student Request Form</h3>
-           <form action="tutorprofile.html" class="text-center mt-5">
+           <form action="googleMapsApi.html" class="text-center mt-5">
        
                <div class="form-floating mt-5">
                    <input type="Name" class="form-control" id="Username" placeholder="name" required>
@@ -99,13 +105,11 @@
                 <label for="floatingInput">Location</label>
             </div>
            <!--Submit Button-->
-            <button id="submitForm" class="btn btn-primary mt-4 btn-lg btn-block" type="submit" onclick="passvalues();">Submit</button>
+            <button class="btn btn-primary mt-4 btn-lg btn-block" type="submit">Submit</button>
         <!-- <button onclick="student_card()" class="btn btn-primary mt-4 btn-lg btn-block" type="submit">Submit</button> -->
-</div>
+
     </form>
    </div> 
- 
-
 
 
 
@@ -127,25 +131,7 @@
   })    
 });
 </script>
-<!-- <script>
- function student_card()
- {
-     var s_name = document.getElementById("Username").value;
-     var s_location = document.getElementById("studentlocation").value
-     console.log("i am here");
- }
-</script> -->
-
- <script>
-    function passvalues()
-    {
-        var address = document.getElementById("studentlocation").value;
-        localStorage.setItem("textvalue1",address);
-        return false;
-    }
-</script> 
 
 <script src="../scripts/posts.js"></script>
-
 </body>
 </html>

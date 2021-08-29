@@ -6,14 +6,19 @@
 } */
 .navbar{
 background-color: #388087 !important;
+
 }
 .container{
     background-color:#Badfe7;
     /* background-color:#FAF6F2; */
     border-radius: 25px;
-    padding-top: 30px;
-    margin-top: 50px !important;
+    /* padding-top: 30px; */
+    /* margin-top: top 1px !important; */
+
+    /* position: relative; */
 }
+
+
 
 .Grade { 
 font-size: 20px;
@@ -23,8 +28,9 @@ outline-color: gray;
 }
 
 #tutorForm {
-    height: 410px; width: 400px;
-    margin-bottom: 100px;
+    /* height: 410px; width: 400px; */
+    /* margin-bottom: 100px; */
+    /* margin-top: 100px; */
 }
 
 .btn{
@@ -33,7 +39,7 @@ outline-color: gray;
 
 #footerRow {
     text-align: center;
-    margin-top: 200px;
+    margin-top: 100px;
     background-color:#Badfe7;
     width: auto;
 }

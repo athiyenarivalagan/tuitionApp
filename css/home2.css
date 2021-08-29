@@ -1,31 +1,22 @@
- /* tab-header styling */
-.nav-link {
-    color:blue !important;
-}
-.navbar-example2{
-    background-color: coral;
-}
- 
- .btn{
+.btn{
     color:black;
     padding:70px;
     font-size: xx-large;
     text-align:center;
-    background: #388087 !important;
+    background: #c2edce !important;
     text-align: center !important;
     text-decoration: none;
 } 
 
 .btn:hover{
     /* background-color:green; */
-    background: green !important;
+    background:coral !important;
 }
 h1{
     text-align: center;
     text-decoration: none;
     margin-bottom: 20px;
 }
-
 #footerRow {
     text-align: center;
     margin-top: 100px;
