@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/athiyenarivalagan/tuitionApp#readme",
   "devDependencies": {
-    "electron": "^13.2.3",
-    "sqlite3": "^5.0.2"
+    "electron": "^13.2.3"
   }
 }

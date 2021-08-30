@@ -12,11 +12,38 @@
     float: right;
 }
 
+/*background*/
+body, html {
+    height: 100%;
+    margin: 0;
+    }
+
+    /* * {
+        box-sizing: border-box;
+    } */
+    
+    .bg {
+    /* The image used */
+    background-image: url("../views/images/carousel3.jpg");
+    
+    /* Full height */
+    height: 100%;
+    
+    /* Add the blur effect */
+    /* backdrop-filter: blur(8px);
+    -webkit-filter: blur(8px); */
+    
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* position: relative; */
+    }
 /* footer */
 
 #footerRow {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 00px;
     background-color:#Badfe7;
     width: auto;
 }
