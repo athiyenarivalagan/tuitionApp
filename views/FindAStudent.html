@@ -65,7 +65,9 @@
                                 </div>
                                 <div class="col-xs-6 col-sm-6 col-md-6">
                                     <span class="spanFont"> STUDENT LOCATION</span>
-                                    <p>NEAREST MRT STATION</p>
+                                    <div id ="loc">
+                                    <p>Clementi,Singapore</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -116,7 +118,7 @@
                                     </div>
                                     <div class="col-xs-6 col-sm-6 col-md-6">
                                         <span class="spanFont"> STUDENT LOCATION</span>
-                                        <p>NEAREST MRT STATION</p>
+                                        <p>Hougang,Sinagpore</p>
                                     </div>
                                 </div>
                             </div>
@@ -167,7 +169,7 @@
                                     </div>
                                     <div class="col-xs-6 col-sm-6 col-md-6">
                                         <span class="spanFont"> STUDENT LOCATION</span>
-                                        <p>NEAREST MRT STATION</p>
+                                        <p>Bedok,Singapore</p>
                                     </div>
                                 </div>
                             </div>
@@ -200,17 +202,91 @@
          //initialize the map
          function initMap() {
          //document.getElementById("ss").innerHTML = localStorage.getItem("textvalue");
+
+         //  const clementi =[ 
+            //  [{ lat: 1.314350, lng: 103.765240},],    
+            //  [{ lat: 103.765240, lng: 103.893650},],    
+            //  [{ lat: 1.32426, lng: 103.953},],
+            // ];
+             var clementi = { lat: 1.314350, lng: 103.765240};
              var map = new google.maps.Map(document.getElementById("map"), {
                  zoom: 12,
                  center: { lat:1.352083,lng:103.819839 },
              });
              var geocoder = new google.maps.Geocoder();
              geocodeAddress(geocoder, map);
+
+             var contentString = '<div id="column1">' +     
+                '<div class="container-fluid mt-2">' +
+                    '<ul style="list-style-type: none">' +
+                        '<li class="card_list" id="card_list">' +
+                            '<div class="card shadow-sm" style="width: 26rem;">' +
+                                '<div class="card-body">' +
+
+                                    '<div class="row">' +
+                                        '<div class="col-md-2">' +
+                                            '<img src="../views/images/placeholder.png" width="50px" height="50px" alt="tutor profile picture" class="profile-pic">' +
+                            "</div>" +
+                            
+                            '<div class="col-md-10">' +
+                                '<h5 class="card-title">Student name</h5>' +
+                            "</div>" +
+                        "</div>" +
+                        "<br>" +
+
+                        '<div class="tutor-data">' +
+                            '<div class="row">' +
+                                '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                    '<span class="spanFont">ACADAMIC LEVEL</span>' +
+                                    '<p>GRADE OF STUDENT</p>' +
+                                    "</div>" +
+                                    '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                        '<span class="spanFont">SUBJECT</span>' +
+                                        '<p>Suject Requested</p>' +
+                                "</div>" +  
+                                '<div class="w-100"></div>' +  
+                                '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                    '<span class="spanFont"> PREFFERED PRICE RANGE</span>' +
+                                    '<p class="priceFont">Price</p>' +
+                                "</div>" +
+                                '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                    '<span class="spanFont"> STUDENT LOCATION</span>' +
+                                    ' <p>Clementi,Singapore</p>' +
+                                "</div>" +
+                            "</div>" +
+                        "</div>" +
+                        
+                        '<a href="#" class="btn btn-primary d-flex justify-content-center">Message</a>' +
+                        
+                        "</div>" +
+                    "</div>" +
+                "</li>" +
+            "</ul>" +
+        "</div>" +
+    "</div>" ;
+
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString,
+    
+            });
+            var marker = new google.maps.Marker({
+                position: clementi,
+                map,
+            });
+            marker.addListener("click", () => {
+                infowindow.open({
+                anchor: marker,
+                map,
+                shouldFocus: false,
+                });
+            });
+
          }
  
          //geocode the address 
          function geocodeAddress(geocoder, resultsMap) {
-             var address = localStorage.getItem("textvalue1");
+             //var address = localStorage.getItem("textvalue1");
+             var address = document.getElementById("loc").value;
              geocoder
              .geocode({ address: address })
              .then(({ results }) => {
