@@ -1,3 +1,6 @@
+/* CSS styling for shome.html */
+
+/* 3 large buttons (green) buttons */
 .btn{
     color:black;
     padding:70px;
@@ -9,7 +12,7 @@
 } 
 
 .btn:hover{
-    /* background-color:green; */
+   
     background:coral !important;
 }
 h1{
