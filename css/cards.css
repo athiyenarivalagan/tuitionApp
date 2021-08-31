@@ -18,15 +18,13 @@
     font-size:20px;
 }
 
-#map{
+#map {
   width: 99%;
   height: 600px;
   border-color:black;
   border-style: solid;
   margin-left: 6px;
-  
 }
-
 
 
 #column1 {
@@ -34,6 +32,7 @@
   float: left;
   
 }
+
 #column2 {
   width: 33%;
   float: left;

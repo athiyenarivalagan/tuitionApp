@@ -12,7 +12,8 @@
     float: right;
 }
 
-/*background*/
+
+/* background */
 body, html {
     height: 100%;
     margin: 0;
@@ -39,8 +40,9 @@ body, html {
     background-size: cover;
     /* position: relative; */
     }
-/* footer */
+    
 
+/* footer */
 #footerRow {
     text-align: center;
     margin-top: 00px;
