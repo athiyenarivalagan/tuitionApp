@@ -1,16 +1,13 @@
 
+/* form layout */
 .container{
     background-color:#Badfe7;
-    /* background-color:#FAF6F2; */
     border-radius: 25px;
-    /* padding-top: 30px; */
-    /* margin-top: top 1px !important; */
 
-    /* position: relative; */
 }
 
 
-
+/* styling for grade dropdown */
 .Grade { 
 font-size: 20px;
 -ms-grid-row-align: stretch;
@@ -18,12 +15,8 @@ margin-top:12px;
 outline-color: gray;
 }
 
-#tutorForm {
-    /* height: 410px; width: 400px; */
-    /* margin-bottom: 100px; */
-    /* margin-top: 100px; */
-}
 
+/* update button */
 .btn{
     width: 370px;
 }
