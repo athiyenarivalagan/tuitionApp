@@ -17,14 +17,15 @@
 </head>
 <body>
  <!--Heading bar--> 
+ <!-- Background -->
  <div class="bg">
- <nav id="header" class="navbar navbar-light px-3">
-    <div>
-     <img src="images/logo.png" alt="" id="logo">
-     <h3 id="navTitle">Tuition App</h3>
-    </div>
-     <h5>Your one stop solution for tuition</h5>
-  </nav>
+   <nav id="header" class="navbar navbar-light px-3">
+     <div>
+       <img src="images/logo.png" alt="" id="logo">
+          <h3 id="navTitle">Tuition App</h3>
+      </div>
+      <h5>Your one stop solution for tuition</h5>
+    </nav>
  <!--End of Header-->
 
     <div class="container border mx-auto shadow-sm mt-5" style="height: 470px; width: 400px;">
@@ -111,8 +112,7 @@
             </div>
            <!--Submit Button-->
             <button id="submitForm" class="btn btn-primary mt-4 btn-lg btn-block" type="submit">Update</button>
-            <!--<button id="submitForm" class="btn btn-primary mt-4 btn-lg btn-block" type="submit" onclick="passvalues();">Update</button> -->
-        <!-- <button onclick="student_card()" class="btn btn-primary mt-4 btn-lg btn-block" type="submit">Submit</button> -->
+           
 </div>
     </form>
    </div> 
@@ -167,6 +167,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 <!-- <script src="../scripts/posts.js"></script> -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<!-- To change the subject choices according to the Grade -->
 <script>
     $(document).ready(function() { // this waits until the document is fully loaded
     // Put custom logic here
@@ -179,24 +181,6 @@
   })    
 });
 </script>
-<!-- <script>
- function student_card()
- {
-     var s_name = document.getElementById("Username").value;
-     var s_location = document.getElementById("studentlocation").value
-     console.log("i am here");
- }
-</script> -->
-
-<!-- <script>
-    function passvalues()
-    {
-        var address = document.getElementById("studentlocation").value;
-        localStorage.setItem("textvalue1",address);
-        return false;
-    }
-</script> -->
-
 <script src="../scripts/posts.js"></script>
 
 </body>
