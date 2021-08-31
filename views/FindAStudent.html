@@ -29,7 +29,7 @@
     <!-- should the container have a margin-top or the card should have it? -->
     <!-- consider making the card as a link -->
     <div class="scrollmenu">
-    
+    <!--Profile card 1-->
     <div id="column1">     
     <div class="container-fluid mt-2">
         <ul style="list-style-type: none">
@@ -83,6 +83,7 @@
     </div>
     </div>
 
+    <!--Profile card 2-->
     <div id="column2">
         <div class="container-fluid mt-2">
             <ul style="list-style-type: none">
@@ -134,6 +135,7 @@
         </div>
         </div>
 
+    <!--Profile card 3-->
     <div id="column3">
         <div class="container-fluid mt-2">
             <ul style="list-style-type: none">
@@ -202,7 +204,6 @@
          //initialize the map
          function initMap() {
          //document.getElementById("ss").innerHTML = localStorage.getItem("textvalue");
-
          //  const clementi =[ 
             //  [{ lat: 1.314350, lng: 103.765240},],    
             //  [{ lat: 103.765240, lng: 103.893650},],    
@@ -216,6 +217,7 @@
              var geocoder = new google.maps.Geocoder();
              geocodeAddress(geocoder, map);
 
+             //info window for marker
              var contentString = '<div id="column1">' +     
                 '<div class="container-fluid mt-2">' +
                     '<ul style="list-style-type: none">' +
@@ -283,7 +285,7 @@
 
          }
  
-         //geocode the address 
+         //to geocode the address 
          function geocodeAddress(geocoder, resultsMap) {
              //var address = localStorage.getItem("textvalue1");
              var address = document.getElementById("loc").value;
