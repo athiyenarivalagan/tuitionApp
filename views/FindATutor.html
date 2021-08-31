@@ -26,7 +26,8 @@
     <!-- should the container have a margin-top or the card should have it? -->
     <!-- consider making the card as a link => when a card is clicked, a modal of the tutor pops up on the google map-->
     <div class="scrollmenu">
-
+        
+    <!--Profile card 1-->
     <div id="column1">
     <div class="container-fluid mt-2">
         <ul style="list-style-type: none">
@@ -87,6 +88,7 @@
     </div>
     </div>
 
+    <!--Profile card 2-->
     <div id = "column2">
     <div class="container-fluid mt-2">
         <ul style="list-style-type: none">
@@ -147,6 +149,7 @@
     </div>
     </div>
 
+    <!--Profile card 3-->
     <div id="column3">
     <div class="container-fluid mt-2">
         <ul style="list-style-type: none">
@@ -242,7 +245,8 @@
             });
             var geocoder = new google.maps.Geocoder();
             geocodeAddress(geocoder, map);
-      
+
+            //info window for marker
             var contentString = '<div id="column3">' +
             '<div class="container-fluid mt-2">' +
                 '<ul style="list-style-type: none">' +
@@ -310,7 +314,7 @@
             });
         }
 
-        //geocode the address 
+        //to geocode the address 
         function geocodeAddress(geocoder, resultsMap) {
            // var address = localStorage.getItem("textvalue");
            var address = document.getElementById("loc").value;
@@ -325,6 +329,7 @@
             })
         }
     </script>
+    
 <!-- <script>
     function passvalues()
     {
