@@ -57,7 +57,8 @@
                             </div>
                             <!-- place text at the center -->
                             <div class="col-md-10">
-                                <h5 class="card-title">tutor name</h5>
+                                <h5 class="card-title">Tutor name</h5>
+                                <span id="name">
                             </div>
                         </div>
                         <br>
@@ -67,29 +68,34 @@
                                 <!-- tutor qualification -->
                                 <div class="col-xs-6 col-sm-6 col-md-6">
                                     <span class="spanFont">QUALIFICATON</span>
+                                    <span id="qualification">
                                     <p>Tutor Qualification</p>
                                 </div>
                                 <!-- grades being taught -->
                                 <div class="col-xs-6 col-sm-6 col-md-6">
                                     <span class="spanFont">Grades</span>
+                                    <span id="level">
                                     <p>Grades Taught</p>
                                 </div>  
                                 <!-- subjects being taught -->
                                 <div class="col-xs-6 col-sm-6 col-md-6">
                                     <span class="spanFont">SUBJECTS</span>
+                                    <span id="sub">
                                     <p>Sujects Taught</p>
                                 </div>
                                 <!-- lesson charges   -->
                                 <div class="col-xs-6 col-sm-6 col-md-6">
                                     <span class="spanFont">PRICE PER SESSION</span>
+                                    <span id="cost">
                                     <p class="priceFont">Price</p>
                                 </div>
                                 <div class="w-100"></div>  
                                <!-- tutor location -->
                                 <div class="col-xs-6 col-sm-6 col-md-6">
                                     <span class="spanFont">LOCATION</span>
-                                     <!--<span id="ss">-->
-                                    <p>Tampines,Sinagapore</p>
+                                     <span id="loc">
+                                    <!-- <p>Tampines,Sinagapore</p> -->
+                                    <p>Tutor Address</p>
                                 </div>
                             </div>
                         </div>
@@ -122,7 +128,7 @@
                             </div>
                             <!-- place text at the center -->
                             <div class="col-md-10">
-                                <h5 class="card-title">tutor name</h5>
+                                <h5 class="card-title">Tutor name</h5>
                             </div>
                         </div>
                         <br>
@@ -149,8 +155,9 @@
                                
                                 <div class="col-xs-6 col-sm-6 col-md-6">
                                     <span class="spanFont">LOCATION</span>
-                                     <!--<span id="ss">-->
-                                    <p>Woodlands,Sinagpore</p>
+                                     <!-- <span id="ss"> -->
+                                    <!-- <p>Woodlands,Sinagpore</p> -->
+                                    <p>Tutor Address</p>
                                 </div>
                             </div>
                         </div>
@@ -183,7 +190,7 @@
                             </div>
                             <!-- place text at the center -->
                             <div class="col-md-10">
-                                <h5 class="card-title">tutor name</h5>
+                                <h5 class="card-title">Tutor name</h5>
                             </div>
                         </div>
                         <br>
@@ -211,9 +218,10 @@
                                 <div class="col-xs-6 col-sm-6 col-md-6">
                                     
                                     <span class="spanFont">LOCATION</span>
-                                        <!--<span id="ss">-->
-                                    <div id = "loc" >        
-                                    <p>Bishan,Singapore</p>
+                                        <!-- <span id="ss"> -->
+                                    <p>Tutor Address</p>
+                                   <!-- <div id = "loc" >        
+                                    <p>Bishan,Singapore</p> -->
                                     </div>
                                 </div>
                             </div>
@@ -246,14 +254,20 @@
 
         //initialize the map
         function initMap() {
+         document.getElementById("loc").innerHTML = localStorage.getItem("textvalue");
+         document.getElementById("name").innerHTML = localStorage.getItem("textvalue2");
+         document.getElementById("qualification").innerHTML = localStorage.getItem("textvalue3");
+         document.getElementById("level").innerHTML = localStorage.getItem("textvalue4");
+         document.getElementById("sub").innerHTML = localStorage.getItem("textvalue5");
+         document.getElementById("cost").innerHTML = localStorage.getItem("textvalue6");
+         
 
-         //document.getElementById("ss").innerHTML = localStorage.getItem("textvalue");
         //  const bishan =[ 
         //  [{ lat: 1.352480, lng: 103.944611},],    
         //  [{ lat: 1.436050, lng: 103.786057},],    
         //  [{ lat: 1.350400, lng: 103.848750},],
         // ];
-            var bishan = { lat: 1.350400, lng: 103.848750};
+            //var bishan = { lat: 1.350400, lng: 103.848750};
         
             var map = new google.maps.Map(document.getElementById("map"), {
                 zoom: 12,
@@ -264,77 +278,77 @@
             geocodeAddress(geocoder, map);
 
             //info window for marker
-            var contentString = '<div id="column3">' +
-            '<div class="container-fluid mt-2">' +
-                '<ul style="list-style-type: none">' +
-                    '<li class="card_list" id="card_list">' +
-                        '<div class="card shadow-sm" style="width: 26rem">' +
-                            '<div class="card-body">' +
-                                '<div class="row">' +
-                                    '<div class="col-md-2">' +
-                                        '<img src="../views/images/placeholder.png" width="50px" height="50px" alt="tutor profile picture" class="profile-pic">' +
-                                    "</div>" +                    
-                                    '<div class="col-md-10">' +
-                                        '<h5 class="card-title">tutor name</h5>' +
-                                    "</div>" +
-                                "</div>" +
-                                "<br>" +
-                                '<div class="tutor-data">' +
-                                    '<div class="row">' +
-                                        '<div class="col-xs-6 col-sm-6 col-md-6">' +
-                                            '<span class="spanFont">QUALIFICATON</span>' +
-                                            '<p>Tutor Qualification</p>' +
-                                        "</div>" +
-                                        '<div class="col-xs-6 col-sm-6 col-md-6">' +
-                                            '<span class="spanFont">Grades</span>' +
-                                            '<p>Grades Taught</p>' +
-                                        "</div>" +
-                                        '<div class="col-xs-6 col-sm-6 col-md-6">' +
-                                            '<span class="spanFont">SUBJECTS</span>' +
-                                            '<p>Sujects Taught</p>' +
-                                        "</div>" + 
-                                        '<div class="col-xs-6 col-sm-6 col-md-6">' +
-                                            '<span class="spanFont">PRICE PER SESSION</span>' +
-                                            '<p class="priceFont">Price</p>' +
-                                        "</div>" +
-                                        '<div class="w-100"></div> ' +                                 
-                                        '<div class="col-xs-6 col-sm-6 col-md-6">' +                                   
-                                            '<span class="spanFont">LOCATION</span>' +
-                                            '<div id = "loc" >' +        
-                                                '<p>Bishan,Singapore</p>' +
-                                                '</div>' +
-                                        "</div>" +
-                                    "</div>" +
-                                "</div>" +                                              
-                                '<a href="#" class="btn btn-primary d-flex justify-content-center">Message</a>' +                       
-                            "</div>" +
-                        "</div>" +
-                    "</li>" +
-                "</ul>" +
-            "</div>" +
-            "</div>" ;
+            // var contentString = '<div id="column3">' +
+            // '<div class="container-fluid mt-2">' +
+            //     '<ul style="list-style-type: none">' +
+            //         '<li class="card_list" id="card_list">' +
+            //             '<div class="card shadow-sm" style="width: 26rem">' +
+            //                 '<div class="card-body">' +
+            //                     '<div class="row">' +
+            //                         '<div class="col-md-2">' +
+            //                             '<img src="../views/images/placeholder.png" width="50px" height="50px" alt="tutor profile picture" class="profile-pic">' +
+            //                         "</div>" +                    
+            //                         '<div class="col-md-10">' +
+            //                             '<h5 class="card-title">tutor name</h5>' +
+            //                         "</div>" +
+            //                     "</div>" +
+            //                     "<br>" +
+            //                     '<div class="tutor-data">' +
+            //                         '<div class="row">' +
+            //                             '<div class="col-xs-6 col-sm-6 col-md-6">' +
+            //                                 '<span class="spanFont">QUALIFICATON</span>' +
+            //                                 '<p>Tutor Qualification</p>' +
+            //                             "</div>" +
+            //                             '<div class="col-xs-6 col-sm-6 col-md-6">' +
+            //                                 '<span class="spanFont">Grades</span>' +
+            //                                 '<p>Grades Taught</p>' +
+            //                             "</div>" +
+            //                             '<div class="col-xs-6 col-sm-6 col-md-6">' +
+            //                                 '<span class="spanFont">SUBJECTS</span>' +
+            //                                 '<p>Sujects Taught</p>' +
+            //                             "</div>" + 
+            //                             '<div class="col-xs-6 col-sm-6 col-md-6">' +
+            //                                 '<span class="spanFont">PRICE PER SESSION</span>' +
+            //                                 '<p class="priceFont">Price</p>' +
+            //                             "</div>" +
+            //                             '<div class="w-100"></div> ' +                                 
+            //                             '<div class="col-xs-6 col-sm-6 col-md-6">' +                                   
+            //                                 '<span class="spanFont">LOCATION</span>' +
+            //                                 '<div id = "loc" >' +        
+            //                                     '<p>Bishan,Singapore</p>' +
+            //                                     '</div>' +
+            //                             "</div>" +
+            //                         "</div>" +
+            //                     "</div>" +                                              
+            //                     '<a href="#" class="btn btn-primary d-flex justify-content-center">Message</a>' +                       
+            //                 "</div>" +
+            //             "</div>" +
+            //         "</li>" +
+            //     "</ul>" +
+            // "</div>" +
+            // "</div>" ;
 
-            var infowindow = new google.maps.InfoWindow({
-                content: contentString,
+            // var infowindow = new google.maps.InfoWindow({
+            //     content: contentString,
     
-            });
-            var marker = new google.maps.Marker({
-                position: bishan,
-                map,
-            });
-            marker.addListener("click", () => {
-                infowindow.open({
-                anchor: marker,
-                map,
-                shouldFocus: false,
-                });
-            });
+            // });
+            // var marker = new google.maps.Marker({
+            //     position: bishan,
+            //     map,
+            // });
+            // marker.addListener("click", () => {
+            //     infowindow.open({
+            //     anchor: marker,
+            //     map,
+            //     shouldFocus: false,
+            //     });
+            // });
         }
 
         //to geocode the address 
         function geocodeAddress(geocoder, resultsMap) {
-           // var address = localStorage.getItem("textvalue");
-           var address = document.getElementById("loc").value;
+            var address = localStorage.getItem("textvalue");
+          // var address = document.getElementById("loc").value;
             geocoder
             .geocode({ address: address })
             .then(({ results }) => {
@@ -347,14 +361,7 @@
         }
     </script>
     
-<!-- <script>
-    function passvalues()
-    {
-        var address = document.getElementById("studentlocation").value;
-        localStorage.setItem("textvalue1",address);
-        return false;
-    }
-</script> -->
+
 
 
 

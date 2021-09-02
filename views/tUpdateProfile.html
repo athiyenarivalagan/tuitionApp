@@ -38,7 +38,7 @@
 <!-- div for form -->
   <div class="container border mx-auto shadow-sm mt-5" style="height: 570px; width: 400px;" id="tutorForm">
     <h3 class="form-header text-center">Tutor Profile Creation</h3>
-       <form action="studentProfile.html" class="text-center mt-5">
+       <form action="FindAStudent.html" class="text-center mt-5">
    
            <div class="form-floating mt-5">
                <input type="Name" class="form-control" id="Username" placeholder="name" required>
@@ -124,8 +124,8 @@
             <label for="floatingInput">Location</label>
         </div>
        <!--Submit Button-->
-       <button id="submitForm" class="btn btn-primary mt-4 btn-lg btn-block" type="submit">Update</button>
-        <!--<button id="submitForm" class="btn btn-primary mt-4 btn-lg btn-block" type="submit" onclick="passvalues();">Update</button>-->
+       <!-- <button id="submitForm" class="btn btn-primary mt-4 btn-lg btn-block" type="submit">Update</button> -->
+        <button id="submitForm" class="btn btn-primary mt-4 btn-lg btn-block" type="submit" onclick="passvalues();">Update</button>
     <!-- <button onclick="student_card()" class="btn btn-primary mt-4 btn-lg btn-block" type="submit">Submit</button> -->
 
 </form>
@@ -197,14 +197,26 @@
  }
 </script> -->
 
- <!--<script>
+<!--to pass values to the findATutor page-->
+ <script>
     function passvalues()
     {
         var address = document.getElementById("tutorlocation").value;
+        var name = document.getElementById("Username").value;
+        var qual = document.getElementById("Qualification").value;
+        var level = document.getElementById("column_select").value;
+        var sub = document.getElementById("layout_select").value;
+        var charge = document.getElementById("Price_Range").value;
         localStorage.setItem("textvalue",address);
+        localStorage.setItem("textvalue2",name);
+        localStorage.setItem("textvalue3",qual);
+        localStorage.setItem("textvalue4",level);
+        localStorage.setItem("textvalue5",sub);
+        localStorage.setItem("textvalue6",charge);
+
         return false;
     }
-</script> -->
+</script>
 
 <script src="../scripts/posts.js"></script>
 </body>
