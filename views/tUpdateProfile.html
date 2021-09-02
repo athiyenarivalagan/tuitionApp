@@ -204,8 +204,10 @@
         var address = document.getElementById("tutorlocation").value;
         var name = document.getElementById("Username").value;
         var qual = document.getElementById("Qualification").value;
-        var level = document.getElementById("column_select").value;
-        var sub = document.getElementById("layout_select").value;
+        //var level = document.getElementById("column_select").value;
+        var level = $('#column_select :selected').text();
+        //var sub = document.getElementById("layout_select").value;
+        var sub = $('#layout_select :selected').text();
         var charge = document.getElementById("Price_Range").value;
         localStorage.setItem("textvalue",address);
         localStorage.setItem("textvalue2",name);

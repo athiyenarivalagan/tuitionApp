@@ -195,8 +195,10 @@
     {
         var address = document.getElementById("studentlocation").value;
         var nn = document.getElementById("Username").value;
-        var standard = document.getElementById("column_select").value;
-        var subje = document.getElementById("layout_select").value;
+        //var standard = document.getElementById("column_select").value;
+        var standard = $('#column_select :selected').text();
+        //var subje = document.getElementById("layout_select").value;
+        var subje = $('#layout_select :selected').text();
         var mon = document.getElementById("Price_Range").value;
         
 
