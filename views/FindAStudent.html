@@ -226,106 +226,142 @@
  
          //initialize the map
          function initMap() {
-         document.getElementById("loc1").innerHTML = localStorage.getItem("textvalue1");
-         document.getElementById("name1").innerHTML = localStorage.getItem("textvalue7");
-         document.getElementById("level1").innerHTML = localStorage.getItem("textvalue8");
-         document.getElementById("sub1").innerHTML = localStorage.getItem("textvalue9");
-         document.getElementById("cost1").innerHTML = localStorage.getItem("textvalue10");
+            document.getElementById("loc1").innerHTML = localStorage.getItem("textvalue1");
+            document.getElementById("name1").innerHTML = localStorage.getItem("textvalue7");
+            document.getElementById("level1").innerHTML = localStorage.getItem("textvalue8");
+            document.getElementById("sub1").innerHTML = localStorage.getItem("textvalue9");
+            document.getElementById("cost1").innerHTML = localStorage.getItem("textvalue10");
          //  const clementi =[ 
             //  [{ lat: 1.314350, lng: 103.765240},],    
             //  [{ lat: 103.765240, lng: 103.893650},],    
             //  [{ lat: 1.32426, lng: 103.953},],
             // ];
             // var clementi = { lat: 1.314350, lng: 103.765240};
+
              var map = new google.maps.Map(document.getElementById("map"), {
                  zoom: 12,
                  center: { lat:1.352083,lng:103.819839 },
              });
+
+             //variable for geocode
              var geocoder = new google.maps.Geocoder();
-             geocodeAddress(geocoder, map);
+             
 
-    //          //info window for marker
-    //          var contentString = '<div id="column1">' +     
-    //             '<div class="container-fluid mt-2">' +
-    //                 '<ul style="list-style-type: none">' +
-    //                     '<li class="card_list" id="card_list">' +
-    //                         '<div class="card shadow-sm" style="width: 26rem;">' +
-    //                             '<div class="card-body">' +
+              //info window for marker
+                var contentString = '<div id="column1">' +     
+                    '<div class="container-fluid mt-2">' +
+                        '<ul style="list-style-type: none">' +
+                            '<li class="card_list" id="card_list">' +
+                                '<div class="card shadow-sm" style="width: 26rem;">' +
+                                    '<div class="card-body">' +
+                                        '<div class="row">' +
+                                            '<div class="col-md-2">' +
+                                            '<img src="../views/images/placeholder.png" width="50px" height="50px" alt="tutor profile picture" class="profile-pic">' +
+                                            "</div>" +
+                                
+                                            '<div class="col-md-10">' +
+                                            '<h5 class="card-title">Student name</h5>' +
+                                            document.getElementById("name1").innerHTML +
+                                            "</div>" +
+                                            "</div>" +
+                                            "<br>" +
 
-    //                                 '<div class="row">' +
-    //                                     '<div class="col-md-2">' +
-    //                                         '<img src="../views/images/placeholder.png" width="50px" height="50px" alt="tutor profile picture" class="profile-pic">' +
-    //                         "</div>" +
+                                            '<div class="tutor-data">' +
+                                            '<div class="row">' +
+                                                '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                                    '<span class="spanFont">ACADAMIC LEVEL</span>' +
+                                                    document.getElementById("level1").innerHTML +
+                                                    "</div>" +
+                                                    '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                                        '<span class="spanFont">SUBJECT</span>' +
+                                                        document.getElementById("sub1").innerHTML +
+                                                "</div>" +  
+                                                '<div class="w-100"></div>' +  
+                                                '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                                    '<span class="spanFont"> PREFFERED PRICE RANGE</span>' +
+                                                    document.getElementById("cost1").innerHTML +
+                                                "</div>" +
+                                                '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                                    '<span class="spanFont"> STUDENT LOCATION</span>' +
+                                                    document.getElementById("loc1").innerHTML +
+                                                "</div>" +
+                                                "</div>" +
+                                             "</div>" +
                             
-    //                         '<div class="col-md-10">' +
-    //                             '<h5 class="card-title">Student name</h5>' +
-    //                         "</div>" +
-    //                     "</div>" +
-    //                     "<br>" +
+                                        '<a href="#" class="btn btn-primary d-flex justify-content-center">Message</a>' +
+                                                    
+                                        "</div>" +
+                                    "</div>" +
+                                "</li>" +
+                            "</ul>" +
+                        "</div>" +
+                    "</div>" ;
 
-    //                     '<div class="tutor-data">' +
-    //                         '<div class="row">' +
-    //                             '<div class="col-xs-6 col-sm-6 col-md-6">' +
-    //                                 '<span class="spanFont">ACADAMIC LEVEL</span>' +
-    //                                 '<p>GRADE OF STUDENT</p>' +
-    //                                 "</div>" +
-    //                                 '<div class="col-xs-6 col-sm-6 col-md-6">' +
-    //                                     '<span class="spanFont">SUBJECT</span>' +
-    //                                     '<p>Suject Requested</p>' +
-    //                             "</div>" +  
-    //                             '<div class="w-100"></div>' +  
-    //                             '<div class="col-xs-6 col-sm-6 col-md-6">' +
-    //                                 '<span class="spanFont"> PREFFERED PRICE RANGE</span>' +
-    //                                 '<p class="priceFont">Price</p>' +
-    //                             "</div>" +
-    //                             '<div class="col-xs-6 col-sm-6 col-md-6">' +
-    //                                 '<span class="spanFont"> STUDENT LOCATION</span>' +
-    //                                 ' <p>Clementi,Singapore</p>' +
-    //                             "</div>" +
-    //                         "</div>" +
-    //                     "</div>" +
-                        
-    //                     '<a href="#" class="btn btn-primary d-flex justify-content-center">Message</a>' +
-                        
-    //                     "</div>" +
-    //                 "</div>" +
-    //             "</li>" +
-    //         "</ul>" +
-    //     "</div>" +
-    // "</div>" ;
+            //variable for info window
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString,
+            });
 
-    //         var infowindow = new google.maps.InfoWindow({
-    //             content: contentString,
-    
-    //         });
-    //         var marker = new google.maps.Marker({
-    //             position: clementi,
-    //             map,
-    //         });
-    //         marker.addListener("click", () => {
-    //             infowindow.open({
-    //             anchor: marker,
-    //             map,
-    //             shouldFocus: false,
-    //             });
-    //         });
+            geocodeAddress(geocoder, map, infowindow);
 
-         }
+                //         var marker = new google.maps.Marker({
+                //             position: clementi,
+                //             map,
+                //         });
+                //         marker.addListener("click", () => {
+                //             infowindow.open({
+                //             anchor: marker,
+                //             map,
+                //             shouldFocus: false,
+                //             });
+                //         });
+
+        }
+
  
-         //to geocode the address 
-         function geocodeAddress(geocoder, resultsMap) {
+         //to geocode the address and create marker 
+         function geocodeAddress(geocoder, resultsMap, infowindow) {
              var address = localStorage.getItem("textvalue1");
             // var address = document.getElementById("loc").value;
              geocoder
              .geocode({ address: address })
              .then(({ results }) => {
                  resultsMap.setCenter(results[0].geometry.location);
-                 new google.maps.Marker({
+                 var marker = new google.maps.Marker({
                      map: resultsMap,
                       position: results[0].geometry.location,
                  });
+
+                 // to create infowindow on clcik
+                marker.addListener("click", () => {
+                infowindow.open({
+                 anchor: marker,
+                 map: resultsMap,
+                 shouldFocus: false,
+                 });
+                });
+
              })
          }
+
+    //function to create a info widnow that displays the profile for the marker
+    function geocodePosition(pos, infowindow) {
+            geocoder.geocode({
+                latLng: pos
+            }, function(responses) {
+                if (responses && responses.length > 0) {
+                var address = localStorage.getItem("textvalue1");      
+               // updateMarkerAddress(address);
+                infowindow.setContent('<div><strong>' + address + '</strong><br>');
+                } 
+                else {
+                var msg = 'Cannot determine address at this location.';      
+                //updateMarkerAddress(msg);
+                infowindow.setContent('<div><strong>' + msg + '</strong><br>');
+                }
+             });
+    } 
+
      </script>
 
 <!-- footer -->

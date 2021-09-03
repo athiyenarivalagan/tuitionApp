@@ -272,7 +272,6 @@
             var map = new google.maps.Map(document.getElementById("map"), {
                 zoom: 12,
                 center: { lat:1.352083,lng:103.819839 },
-            
             });
 
             //variable for geocode
@@ -358,7 +357,7 @@
             // });
         }
 
-        //to geocode the address 
+        //to geocode the address and create marker
         function geocodeAddress(geocoder, resultsMap, infowindow) {
             var address = localStorage.getItem("textvalue");
            // var address = document.getElementById("loc").value;
@@ -370,6 +369,8 @@
                     map: resultsMap,
                     position: results[0].geometry.location,
                 });
+
+                // to create infowindow on clcik
                 marker.addListener("click", () => {
                 infowindow.open({
                  anchor: marker,
