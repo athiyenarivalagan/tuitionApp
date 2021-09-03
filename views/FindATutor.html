@@ -274,59 +274,72 @@
                 center: { lat:1.352083,lng:103.819839 },
             
             });
-            var geocoder = new google.maps.Geocoder();
-            geocodeAddress(geocoder, map);
 
+            //variable for geocode
+            var geocoder = new google.maps.Geocoder();
+                      
             //info window for marker
-            // var contentString = '<div id="column3">' +
-            // '<div class="container-fluid mt-2">' +
-            //     '<ul style="list-style-type: none">' +
-            //         '<li class="card_list" id="card_list">' +
-            //             '<div class="card shadow-sm" style="width: 26rem">' +
-            //                 '<div class="card-body">' +
-            //                     '<div class="row">' +
-            //                         '<div class="col-md-2">' +
-            //                             '<img src="../views/images/placeholder.png" width="50px" height="50px" alt="tutor profile picture" class="profile-pic">' +
-            //                         "</div>" +                    
-            //                         '<div class="col-md-10">' +
-            //                             '<h5 class="card-title">tutor name</h5>' +
-            //                         "</div>" +
-            //                     "</div>" +
-            //                     "<br>" +
-            //                     '<div class="tutor-data">' +
-            //                         '<div class="row">' +
-            //                             '<div class="col-xs-6 col-sm-6 col-md-6">' +
-            //                                 '<span class="spanFont">QUALIFICATON</span>' +
-            //                                 '<p>Tutor Qualification</p>' +
-            //                             "</div>" +
-            //                             '<div class="col-xs-6 col-sm-6 col-md-6">' +
-            //                                 '<span class="spanFont">Grades</span>' +
-            //                                 '<p>Grades Taught</p>' +
-            //                             "</div>" +
-            //                             '<div class="col-xs-6 col-sm-6 col-md-6">' +
-            //                                 '<span class="spanFont">SUBJECTS</span>' +
-            //                                 '<p>Sujects Taught</p>' +
-            //                             "</div>" + 
-            //                             '<div class="col-xs-6 col-sm-6 col-md-6">' +
-            //                                 '<span class="spanFont">PRICE PER SESSION</span>' +
-            //                                 '<p class="priceFont">Price</p>' +
-            //                             "</div>" +
-            //                             '<div class="w-100"></div> ' +                                 
-            //                             '<div class="col-xs-6 col-sm-6 col-md-6">' +                                   
-            //                                 '<span class="spanFont">LOCATION</span>' +
-            //                                 '<div id = "loc" >' +        
-            //                                     '<p>Bishan,Singapore</p>' +
-            //                                     '</div>' +
-            //                             "</div>" +
-            //                         "</div>" +
-            //                     "</div>" +                                              
-            //                     '<a href="#" class="btn btn-primary d-flex justify-content-center">Message</a>' +                       
-            //                 "</div>" +
-            //             "</div>" +
-            //         "</li>" +
-            //     "</ul>" +
-            // "</div>" +
-            // "</div>" ;
+            var contentString = '<div id="column1">' +
+            '<div class="container-fluid mt-2">' +
+                '<ul style="list-style-type: none">' +
+                    '<li class="card_list" id="card_list">' +
+                        '<div class="card shadow-sm" style="width: 26rem">' +
+                            '<div class="card-body">' +
+                                '<div class="row">' +
+                                    '<div class="col-md-2">' +
+                                        '<img src="../views/images/placeholder.png" width="50px" height="50px" alt="tutor profile picture" class="profile-pic">' +
+                                    "</div>" +                    
+                                    '<div class="col-md-10">' +
+                                        '<h5 class="card-title">tutor name</h5>' +
+                                        document.getElementById("name").innerHTML +
+                                    "</div>" +
+                                "</div>" +
+                                "<br>" +
+                                '<div class="tutor-data">' +
+                                    '<div class="row">' +
+                                        '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                            '<span class="spanFont">QUALIFICATON</span>' +
+                                            document.getElementById("qualification").innerHTML +
+                                            
+                                        "</div>" +
+                                        '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                            '<span class="spanFont">Grades</span>' +
+                                            document.getElementById("level").innerHTML +
+                                            
+                                        "</div>" +
+                                        '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                            '<span class="spanFont">SUBJECTS</span>' +
+                                            document.getElementById("sub").innerHTML +
+                                            
+                                        "</div>" + 
+                                        '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                            '<span class="spanFont">PRICE PER SESSION</span>' +
+                                            document.getElementById("cost").innerHTML +
+                                            
+                                        "</div>" +
+                                        '<div class="w-100"></div> ' +                                 
+                                        '<div class="col-xs-6 col-sm-6 col-md-6">' +                                   
+                                            '<span class="spanFont">LOCATION</span>' +
+                                            document.getElementById("loc").innerHTML +     
+                                            
+                                           "</div>" +
+                                        "</div>" +
+                                    "</div>" +
+                                "</div>" +                                              
+                                '<a href="#" class="btn btn-primary d-flex justify-content-center">Message</a>' +                       
+                            "</div>" +
+                        "</div>" +
+                    "</li>" +
+                "</ul>" +
+            "</div>" +
+            "</div>" ;
+
+            //variable for info window
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString,
+            });
+
+            geocodeAddress(geocoder, map, infowindow);
 
             // var infowindow = new google.maps.InfoWindow({
             //     content: contentString,
@@ -346,25 +359,48 @@
         }
 
         //to geocode the address 
-        function geocodeAddress(geocoder, resultsMap) {
+        function geocodeAddress(geocoder, resultsMap, infowindow) {
             var address = localStorage.getItem("textvalue");
-          // var address = document.getElementById("loc").value;
+           // var address = document.getElementById("loc").value;
             geocoder
             .geocode({ address: address })
             .then(({ results }) => {
                 resultsMap.setCenter(results[0].geometry.location);
-                new google.maps.Marker({
+                var marker = new google.maps.Marker({
                     map: resultsMap,
-                     position: results[0].geometry.location,
+                    position: results[0].geometry.location,
                 });
+                marker.addListener("click", () => {
+                infowindow.open({
+                 anchor: marker,
+                 map: resultsMap,
+                 shouldFocus: false,
+                 });
+                });
+                //geocodePosition(marker.getPosition(), infowindow);
             })
+
         }
+
+        //function to create a info widnow that displays the profile for the marker
+        function geocodePosition(pos, infowindow) {
+            geocoder.geocode({
+                latLng: pos
+            }, function(responses) {
+                if (responses && responses.length > 0) {
+                var address = localStorage.getItem("textvalue");      
+               // updateMarkerAddress(address);
+                infowindow.setContent('<div><strong>' + address + '</strong><br>');
+                } 
+                else {
+                var msg = 'Cannot determine address at this location.';      
+                //updateMarkerAddress(msg);
+                infowindow.setContent('<div><strong>' + msg + '</strong><br>');
+                }
+             });
+        } 
     </script>
     
-
-
-
-
 <!-- footer -->
 <div id="footerRow">
     <!-- <footer class="container py-5"> -->
@@ -404,6 +440,7 @@
         </div>
       </footer>
     </div>
+
 <!--Maps Api script-->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpsU6ailc5cINO7THGgJq7mVv8uGBfGw4&callback=initMap&libraries=&v=weekly" async></script>
 
