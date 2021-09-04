@@ -1,7 +1,11 @@
-/* CSS styling for shome.html */
+/* sHome.html styling*/
+
 
 /* 3 large buttons (green) buttons */
-.btn{
+/* changed .btn to #transBtnGreen
+styling not altered */
+
+#transBtnGreen {
     color:black;
     padding:70px;
     font-size: xx-large;
@@ -9,16 +13,15 @@
     background: #c2edce !important;
     text-align: center !important;
     text-decoration: none;
-} 
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+    height: 25px;
+}
 
-.btn:hover{
+#transBtnGreen:hover {
    
     background:coral !important;
-}
-h1{
-    text-align: center;
-    text-decoration: none;
-    margin-bottom: 20px;
 }
 
 

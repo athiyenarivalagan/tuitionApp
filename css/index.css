@@ -1,4 +1,4 @@
-h4 {
+/* h4 {
     color: blue;
     margin: 3px 20px;
     font-size: 20px;
@@ -13,18 +13,6 @@ h6 {
 .checked {
     color: orange;
 }
-
-/* footer {
-    position:relative;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    padding: 0 5px;
-    background-color: aliceblue;
-    color: black;
-    text-align:left;
-    margin-top: 5px;
-} */
 
 .container1 {
     border: 2px solid black;
@@ -50,24 +38,27 @@ h6 {
     padding: 0 10px;
     text-align:justify;
     position: relative;
-}
+} */
 
 /* Create three equal columns that floats next to each other */
-.column1 {
+/* .column1 {
     float: left;
     width: 33.33%;
-}
+} */
 
 /* Clear floats after the columns */
-.row1:after {
+/* .row1:after {
     content: "";
     display: table;
     clear: both;
-}
+} */
 
-/* index icon styling */
+
+/* login-from (index-page) styling */
+
+/* icon styling */
 i {
-   color:gray; 
+   color: gray; 
 }
 
 /* label styling  */
@@ -79,31 +70,3 @@ label {
 .nav-link {
     color: gray
 }
-
-/* background style */
-body, html {
-    height: 100%;
-    margin: 0;
-    }
-
-    /* * {
-        box-sizing: border-box;
-    } */
-    
-    .bg {
-    /* The image used */
-    background-image: url("../views/images/carousel3.jpg");
-    
-    /* Full height */
-    height: 100%;
-    
-    /* Add the blur effect */
-    /* backdrop-filter: blur(8px);
-    -webkit-filter: blur(8px); */
-    
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* position: relative; */
-    }

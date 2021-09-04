@@ -1,9 +1,11 @@
+/* forms to update student & tutor data */
+
 
 /* form layout */
-.container{
+/* .container changed to #form */
+#form {
     background-color:#Badfe7;
     border-radius: 25px;
-
 }
 
 
@@ -17,7 +19,8 @@ outline-color: gray;
 
 
 /* update button */
-.btn{
+/* .btn changed to #submitFrom */
+#submitForm {
     width: 370px;
 }
 

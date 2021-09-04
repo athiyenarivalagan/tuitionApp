@@ -1,6 +1,7 @@
 /* header */
-#header {
-    background-color: #Badfe7 !important;
+
+.header {
+    background-color: #Badfe7 !important; 
 }
 
 #logo {
@@ -8,12 +9,9 @@
     width: 50px;
 }
 
-#navTitle {
-    float: right;
-}
 
+/* background-image */
 
-/* background */
 body, html {
     height: 100%;
     margin: 0;
@@ -23,29 +21,32 @@ body, html {
         box-sizing: border-box;
     } */
     
-    .bg {
-    /* The image used */
+.bg {
+
+    /* image used */
     background-image: url("../views/images/carousel3.jpg");
     
     /* Full height */
     height: 100%;
     
-    /* Add the blur effect */
-    /* backdrop-filter: blur(8px);
-    -webkit-filter: blur(8px); */
-    
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* position: relative; */
-    }
+    position: relative;
+}
     
 
 /* footer */
+
 #footerRow {
     text-align: center;
     margin-top: 00px;
     background-color:#Badfe7;
     width: auto;
 }
+
+/* social media icon styling */
+i {
+    color: gray; 
+ }

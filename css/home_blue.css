@@ -1,22 +1,23 @@
- /* CSS styling for shome.html */
+/* 3 large buttons (blue) buttons for tHome.html*/
 
-/* 3 large buttons (blue) buttons */
- .btn{
+/* changed .btn to #transBtnBlue
+styling not altered */
+
+ #transBtnBlue {
     color:black;
     padding:70px;
     font-size: xx-large;
     text-align:center;
-    background: #388087 !important;
+     background: #388087 !important;
     text-align: center !important;
     text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+    height: 25px;
 } 
 
-.btn:hover{
+#transBtnBlue:hover {
     /* background-color:green; */
     background: green !important;
-}
-h1{
-    text-align: center;
-    text-decoration: none;
-    margin-bottom: 20px;
 }

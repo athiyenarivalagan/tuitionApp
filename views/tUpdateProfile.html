@@ -1,225 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <title>tUpdateProfile</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-   <!--link to css page-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--CSS-->
    <link href="../css/form.css" type="text/css" rel="stylesheet">
    <link href="../css/general.css" type="text/css" rel="stylesheet">
-  
-
-
-    <title>Document</title>
+   <!-- Font Awesome Icon Library -->
+   <script src="https://kit.fontawesome.com/1c9222c777.js"></script>
 </head>
+
+
 <body>
- <!--Header--> 
- <!--background-->
-<div class="bg">
- <nav id="header" class="navbar navbar-light px-3">
+  <!-- header -->
+    <div class="container">
+        <header class="header py-2 fixed-top">
+            <div class="row flex-nowrap justify-content-between align-items-center">
 
-   <div>
-      <!-- link to tutor home page -->
-     <a href="tHome.html">
-       <img src="images/logo.png" alt="" id="logo">
-       <h3 id="navTitle">MyTutor</h3>
-     </a>
-  </div>
+                <div class="col-4 text-center">
+                    <!-- back button-link -->
+                    <a href="../views/tHome.html" style="color: black;">Back</a>
+                </div>
 
-    <h5>Your one stop solution for tuition</h5>
- </nav>
-<!--End of Header-->
+                <!-- app logo -->
+                <div class="col-4 d-flex justify-content-center align-items-center">
+                    <img src="images/logo.png" alt="app logo" id="logo">
+                    <h3 id="navTitle">MyTutor</h3>
+                </div>
+
+                <!-- tagline -->
+                <div class="col-4 text-center">
+                    <h5>Your one stop solution for tuition</h5>
+                </div>
+
+            </div>
+        </header>
+    </div>
+    <!-- end of header -->
+
+
   <!-- form-container -->
-  
-
-<!-- div for form -->
-  <div class="container border mx-auto shadow-sm mt-5" style="height: 570px; width: 400px;" id="tutorForm">
-    <h3 class="form-header text-center">Tutor Profile Creation</h3>
-       <form action="FindAStudent.html" class="text-center mt-5">
-   
-           <div class="form-floating mt-5">
-               <input type="Name" class="form-control" id="Username" placeholder="name" required>
-               <label for="floatingInput">Name</label>
-           </div>
-
-         <div class="form-floating mt-5">
-            <input type="text" class="form-control" id="Qualification" placeholder="Qualification" required>
-            <label for="floatingInput">Qualification</label>
-         </div>
-       
-      
-    <!-- Grade-->
-
- <div class="Grade form">
-    <select name="column_select" id="column_select">
-      <option value="col1">Grade Taught</option>
-      <option value="col1">Primary 1</option>
-      <option value="col1">Primary 2</option>
-      <option value="col1">Primary 3</option>
-      <option value="col1">Primary 4</option>
-      <option value="col1">Primary 5</option>
-      <option value="col1">Primary 6</option>
-   
-      <option value="col2">Secondary 1</option>
-      <option value="col2">Secondary 2</option>
-      <option value="col2">Secondary 3</option>
-      <option value="col2">Secondary 4</option>
-
-      <option value="col3">Junior College 1</option>
-      <option value="col3">Junior College 2</option>
-   
-    </select>
-
-    <!-- Subjects -->
-    <!-- <select name="layout_select" id="layout_select"> -->
-    <select name="layout_select" id="layout_select" class="postInfo">
-   
-<!--Below shows when '1 column' is selected is hidden otherwise-->
-      <option value="col1_ms">Subjects Taught</option>
-      <option value="col1_sms">Math</option>
-      <option value="col1_smss">Science</option> 
-      <option value="col1_smss">English</option> 
- 
-<!--Below shows when '2 column' is selected is hidden otherwise-->
-     <option value="col2_ms">English</option> 
-     <option value="col2_sms">Physics</option>
-     <option value="col2_sms">Biology</option>
-     <option value="col2_smss">Chemistry</option>
-     <option value="col2_smss">Elementary Math</option>
-     <option value="col2_smss">Additional Math</option>
-     <option value="col2_smss">Geography</option>
-     <option value="col2_smss">History</option>
-
-<!-- Below shows when '3 column' is selected is hidden otherwise-->
-     <option value="col3_mss">General Paper</option>
-     <option value="col3_ssm">H2 Futher Math</option>
-     <option value="col3_sms">H2 Literature</option> 
-     <option value="col3_sms">H2 Business</option> 
-     <option value="col3_sms">H2 Psychology</option> 
-     <option value="col3_sms">H2 Chemistry</option> 
-    <option value="col3_sms">H2 Physics</option> 
-
-    </select>
- </div>
-   <!-- Pricing -->
-    <div class=" Grade mt-4 ">
-         <!-- <select name="price Range" id="Price Range"> -->
+    <div class="bg">
+        <!-- changed id from tutorForm to form -->
+        <div class="container border mx-auto shadow-sm mt-5 position-absolute top-50 start-50 translate-middle" style="height: 570px; width: 400px;" id="form">
+            <h3 class="form-header text-center">Create Tutor Profile</h3>
+            <form action="FindAStudent.html" class="text-center mt-5">
             
-      <div class="mt-2">
-          <label for="Pricing">Price Range:</label>
-          <br>
-          <select name="price Range" id="Price_Range" class="postInfo">
-              <option value="$30 - $40">$30 - $40</option>
-              <option value="$40 - $50">$40 - $50</option>
-              <option value="Above $50">Above $50</option>
-          </select>
-      </div>
+            <div class="form-floating mt-5 mb-3">
+                <input type="Name" class="form-control" id="Username" placeholder="name" required>
+                <label for="floatingInput">Name</label>
+            </div>
+
+            <div class="form-floating">
+                <input type="text" class="form-control" id="Qualification" placeholder="Qualification" required>
+                <label for="floatingInput">Qualification</label>
+            </div>
+        
+            <!-- Subject-->
+            <div class="Grade form">
+                <select name="column_select" id="column_select">
+                    <option value="col1">Grade Taught</option>
+                    <option value="col1">Primary 1</option>
+                    <option value="col1">Primary 2</option>
+                    <option value="col1">Primary 3</option>
+                    <option value="col1">Primary 4</option>
+                    <option value="col1">Primary 5</option>
+                    <option value="col1">Primary 6</option>
+                
+                    <option value="col2">Secondary 1</option>
+                    <option value="col2">Secondary 2</option>
+                    <option value="col2">Secondary 3</option>
+                    <option value="col2">Secondary 4</option>
+
+                    <option value="col3">Junior College 1</option>
+                    <option value="col3">Junior College 2</option>
+                </select>
+
+                <!-- Subjects -->
+                <!-- <select name="layout_select" id="layout_select"> -->
+                <select name="layout_select" id="layout_select" class="postInfo">
+                    <!--Below shows when '1 column' is selected is hidden otherwise-->
+                    <option value="col1_ms">Subjects Taught</option>
+                    <option value="col1_sms">Math</option>
+                    <option value="col1_smss">Science</option> 
+                    <option value="col1_smss">English</option> 
+                
+                    <!--Below shows when '2 column' is selected is hidden otherwise-->
+                    <option value="col2_ms">English</option> 
+                    <option value="col2_sms">Physics</option>
+                    <option value="col2_sms">Biology</option>
+                    <option value="col2_smss">Chemistry</option>
+                    <option value="col2_smss">Elementary Math</option>
+                    <option value="col2_smss">Additional Math</option>
+                    <option value="col2_smss">Geography</option>
+                    <option value="col2_smss">History</option>
+
+                    <!-- Below shows when '3 column' is selected is hidden otherwise-->
+                    <option value="col3_mss">General Paper</option>
+                    <option value="col3_ssm">H2 Futher Math</option>
+                    <option value="col3_sms">H2 Literature</option> 
+                    <option value="col3_sms">H2 Business</option> 
+                    <option value="col3_sms">H2 Psychology</option> 
+                    <option value="col3_sms">H2 Chemistry</option> 
+                    <option value="col3_sms">H2 Physics</option>
+                </select>
+            </div>
+
+            <!-- Pricing -->
+            <div class="Grade mt-4 ">
+                <!-- <select name="price Range" id="Price Range"> -->
+                <div class="mt-2">
+                    <label for="Pricing">Price Range:</label><br>
+                    <select name="price Range" id="Price_Range" class="postInfo">
+                        <option value="$30 - $40">$30 - $40</option>
+                        <option value="$40 - $50">$40 - $50</option>
+                        <option value="Above $50">Above $50</option>
+                    </select>
+                </div>
+            </div>
+
+                <!-- Location -->
+            <div class="form-floating mt-4 ">
+                <input type="text" class="form-control" id="tutorlocation" placeholder="Location" required>
+                <label for="floatingInput">Location</label>
+            </div>
+
+                <!--Update Button-->
+            <button id="submitForm" class="btn btn-primary mt-4 btn-lg btn-block" type="submit" onclick="passvalues();">Update</button>
+        </form>
     </div>
-    <!-- Location -->
-        <div class="form-floating mt-4 ">
-            <input type="text" class="form-control" id="tutorlocation" placeholder="Location" required>
-            <label for="floatingInput">Location</label>
+</div>
+
+
+  <!-- footer -->
+  <div id="footerRow" style="margin-top: 0px">
+    <footer class="text-center">
+        <div class="container">
+            <div class="row">
+
+                <!-- About Us component -->
+                <div class="col-md-4 mx-auto">
+                    <h6 class="text-uppercase mb-4 mt-2" style="color: black;">About Us</h6>
+                    <p class="mb-0 fw-normal text-center">
+                        Tuition App provides information about the various tutions out there.
+                        This app is suitable for everyone regardless of their age or grade.
+                        Our app has many features and has good reviews and feedbacks from the users.
+                    </p>
+                </div>
+
+                <!-- around the web comp -->
+                <div class="col-md-4 mb-5 mx-auto">
+                    <h6 class="text-uppercase mb-4 mt-2" style="color: black;">Around the Web</h6>
+                    <ul class="list-inline mb-0">
+                        <!-- facebook -->
+                        <li class="list-inline-item">
+                            <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.facebook.com/"  target="_blank">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </li>
+                        <!-- microsoft outlook -->
+                        <li class="list-inline-item">
+                            <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://outlook.live.com/"  target="_blank">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </li>
+                        <!-- twitter -->
+                        <li class="list-inline-item">
+                            <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://twitter.com/?lang=en"  target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <!-- linkedin -->
+                        <li class="list-inline-item">
+                            <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.linkedin.com/feed/" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <!-- instagram -->
+                        <li class="list-inline-item">
+                            <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.instagram.com/"  target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- location comp -->
+                <div class="col-md-4 mb-5 mx-auto">
+                    <h6 class="text-uppercase mb-4 mt-2" style="color: black;">Contact Us</h6>
+                    <p class="mb-0 fw-normal text-center" style="color: black;">
+                        60 Paya Lebar Rd,<br>
+                        #06-57,<br>
+                        Singapore 409057<br>
+                        Malaysia | Singapore
+                    </p>
+                </div>
+            </div>
         </div>
-       <!--Submit Button-->
-       <!-- <button id="submitForm" class="btn btn-primary mt-4 btn-lg btn-block" type="submit">Update</button> -->
-        <button id="submitForm" class="btn btn-primary mt-4 btn-lg btn-block" type="submit" onclick="passvalues();">Update</button>
-    <!-- <button onclick="student_card()" class="btn btn-primary mt-4 btn-lg btn-block" type="submit">Submit</button> -->
+    </footer>
 
-</form>
-</div> 
-</div>
-
-
-<!-- footer -->
-<div id="footerRow">
-<!-- <footer class="container py-5"> -->
-<footer>
-    <div class="row"> 
-      <div class="col-6 col-md">
-        <h5>Social Media</h5>
-        <ul class="list-unstyled text-small">
-          <li><a href="https://www.twitter.com/">
-            <img alt="Qries" src="images/twitter.png"
-            width=50" height="50">
-         </a></li>
-          <li><a href="https://www.facebook.com/">
-            <img alt="Qries" src="images/facebook.png"
-            width=50" height="50">
-         </a></li>
-          <li><a href="https://www.instagram.com/">
-            <img alt="Qries" src="images/instagram.png"
-            width=50" height="50">
-         </a></li>
-          
-        </ul>
-      </div>
-      <div class="col-6 col-md">
-        <h5>About</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="text-muted" href="#">Team</a></li>
-          <li><a class="text-muted" href="#">Privacy</a></li>
-          <li><a class="text-muted" href="#">Terms</a></li>
-        </ul>
-      </div>
+    <!-- copyright component -->
+    <div class="copyright py-3 text-center mt-4" style="background-color:#a7c8cf;">
+        <div class="container" style="color: black;">
+            <small>Copyright &copy; Tuition App 2021</small>
+        </div>
     </div>
-  </footer>
-</div>
+  </div>
+  <!-- end of footer -->
 
 
-     
- 
-  
-<!-- Bootstrap Javascript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-<!-- <script src="../scripts/posts.js"></script> -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script>
-    $(document).ready(function() { // this waits until the document is fully loaded
-    // Put custom logic here
-    $(document).ready(function() {
-    $("#layout_select").children('option:gt(2)').hide();
-    $("#column_select").change(function() {
-        $("#layout_select").children('option').hide();
-        $("#layout_select").children("option[value^=" + $(this).val() + "]").show()
-    })
-  })    
-});
-</script>
-<!-- <script>
- function student_card()
- {
-     var s_name = document.getElementById("Username").value;
-     var s_location = document.getElementById("studentlocation").value
-     console.log("i am here");
- }
-</script> -->
+  <!-- Bootstrap Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-<!--to pass values to the findATutor page-->
- <script>
-    function passvalues()
+    <script>
+        $(document).ready(function() { // this waits until the document is fully loaded
+        // Put custom logic here
+        $(document).ready(function() {
+        $("#layout_select").children('option:gt(2)').hide();
+        $("#column_select").change(function() {
+            $("#layout_select").children('option').hide();
+            $("#layout_select").children("option[value^=" + $(this).val() + "]").show()
+        })
+    })    
+    });
+    </script>
+
+    <!-- <script>
+    function student_card()
     {
-        var address = document.getElementById("tutorlocation").value;
-        var name = document.getElementById("Username").value;
-        var qual = document.getElementById("Qualification").value;
-        //var level = document.getElementById("column_select").value;
-        var level = $('#column_select :selected').text();
-        //var sub = document.getElementById("layout_select").value;
-        var sub = $('#layout_select :selected').text();
-        var charge = document.getElementById("Price_Range").value;
-        localStorage.setItem("textvalue",address);
-        localStorage.setItem("textvalue2",name);
-        localStorage.setItem("textvalue3",qual);
-        localStorage.setItem("textvalue4",level);
-        localStorage.setItem("textvalue5",sub);
-        localStorage.setItem("textvalue6",charge);
-
-        return false;
+        var s_name = document.getElementById("Username").value;
+        var s_location = document.getElementById("studentlocation").value
+        console.log("i am here");
     }
-</script>
+    </script> -->
 
-<script src="../scripts/posts.js"></script>
+    <!--to pass values to the findATutor page-->
+
+    <script>
+        function passvalues()
+        {
+            var address = document.getElementById("tutorlocation").value;
+            var name = document.getElementById("Username").value;
+            var qual = document.getElementById("Qualification").value;
+            //var level = document.getElementById("column_select").value;
+            var level = $('#column_select :selected').text();
+            //var sub = document.getElementById("layout_select").value;
+            var sub = $('#layout_select :selected').text();
+            var charge = document.getElementById("Price_Range").value;
+            localStorage.setItem("textvalue",address);
+            localStorage.setItem("textvalue2",name);
+            localStorage.setItem("textvalue3",qual);
+            localStorage.setItem("textvalue4",level);
+            localStorage.setItem("textvalue5",sub);
+            localStorage.setItem("textvalue6",charge);
+
+            return false;
+        }
+    </script>
+
+    <!-- JS -->
+    <script src="../scripts/posts.js"></script>
+
+
 </body>
 </html>
