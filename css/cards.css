@@ -1,4 +1,5 @@
-/*input default styles*/
+/* input default styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,19 +7,33 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* profile card styling */
+
 .spanFont {
   color: darkgray;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 12px;
+}
+
+p {
+  font-weight: 500;
+  font-size: 13px;
 }
 
 .priceFont {
     color:green;
     font-weight:600;
-    font-size:20px;
+    font: size 16px;
 }
 
-/*map styling*/
+/* card spacing */
+.card-list {
+  display: flex;
+  /* padding: 0 30px; */
+}
+
+
+/* map styling */
 #map {
   width: 99%;
   height: 600px;
@@ -27,22 +42,7 @@
   margin-left: 6px;
 }
 
-/*Profile card styling*/
-#column1 {
-  width: 33%;
-  float: left;
-  
-}
-#column2 {
-  width: 33%;
-  float: left;
-  padding: 0 30px;
-}
-#column3 {
-  width: 33%;
-  float: left;
-  padding: 0 60px;
-}
+/* scroll bar */
 div.scrollmenu {
   overflow-x:scroll;
 }

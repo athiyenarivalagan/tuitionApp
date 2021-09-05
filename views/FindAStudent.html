@@ -1,50 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>student profile</title>
+    <title>student profile displayt</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="../css/cards.css">
     <link rel="stylesheet" href="../css/general.css">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- css -->
-    <link rel="stylesheet" href="../css/googleMapsApi.css">
-    <title> Student Request</title>
+    <!-- Font Awesome Icon Library -->
+    <script src="https://kit.fontawesome.com/1c9222c777.js"></script>
 </head>
 
+
 <body>
- <!--Heading bar--> 
- <nav id="header" class="navbar navbar-light px-3">
-     <!-- consider adding container fluid-->
+    <!-- header -->
+    <div class="container">
+        <header class="header py-2 fixed-top">
+            <div class="row flex-nowrap justify-content-between align-items-center">
 
-    <div>
-        <!-- link to tutor home page -->
-        <a href="tHome.html">
-            <img src="images/logo.png" alt="" id="logo">
-            <h3 id="navTitle">MyTutor</h3>
-        </a>
+                <div class="col-4 text-center">
+                    <a href="../views/sHome.html" style="color: black;">Back</a>
+                </div>
+
+                <!-- app logo -->
+                <div class="col-4 d-flex justify-content-center align-items-center">
+                    <img src="images/logo.png" alt="app logo" id="logo">
+                    <h3 id="navTitle">MyTutor</h3>
+                </div>
+
+                <!-- tagline -->
+                <div class="col-4 text-center">
+                    <h5>Your one stop solution for tuition</h5>
+                </div>
+            </div>
+        </header>
     </div>
+    <!-- end of header -->
 
-    <!-- link to tutor profile page-->
-    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="FindATutor.html">Tutor Profile</a>
-        </li>
-    </ul>
-
-     <h5>Your one stop solution for tuition</h5>
-  </nav>
-  <!--End of Header-->
-
-    <!-- should the container have a margin-top or the card should have it? -->
-    <!-- consider making the card as a link -->
     <div class="scrollmenu">
     <!--Profile card 1-->
     <div id="column1">     
     <div class="container-fluid mt-2">
         <ul style="list-style-type: none">
+
+            <!-- profile card 1?? -->
             <li class="card_list" id="card_list">
                 <div class="card shadow-sm" style="width: 26rem;">
                     <div class="card-body">
@@ -54,6 +57,7 @@
                                 <img src="../views/images/placeholder.png" width="50px" height="50px" alt="tutor profile picture" class="profile-pic">
                             </div>
                             <!-- place text at the center -->
+
                             <!-- student name -->
                             <div class="col-md-10">
                                 <h5 class="card-title">Student name</h5>
@@ -64,12 +68,14 @@
 
                         <div class="tutor-data">
                             <div class="row">
+
                                 <!-- student education level -->
                                 <div class="col-xs-6 col-sm-6 col-md-6">
                                     <span class="spanFont">ACADAMIC LEVEL</span>
                                     <span id="level1">
                                     <p>GRADE OF STUDENT</p>
                                 </div>
+
                                 <!-- subjects that require tuition -->
                                 <div class="col-xs-6 col-sm-6 col-md-6">
                                     <span class="spanFont">SUBJECT</span>
@@ -77,12 +83,14 @@
                                     <p>Suject Requested</p>
                                 </div>  
                                 <div class="w-100"></div>  
+
                                 <!-- desired price range  -->
                                 <div class="col-xs-6 col-sm-6 col-md-6">
                                     <span class="spanFont"> PREFFERED PRICE RANGE</span>
                                     <span id="cost1">
                                     <p class="priceFont">Price</p>
                                 </div>
+
                                 <!-- student location -->
                                 <div class="col-xs-6 col-sm-6 col-md-6">
                                     <span class="spanFont"> STUDENT LOCATION</span>
@@ -95,12 +103,11 @@
                             </div>
                         </div>
                         
-                        <!-- message button -->
                         <!-- link to message page -->
-                            <a href="#" class="btn btn-primary d-flex justify-content-center">Message</a>
-                        
+                        <a href="#" class="btn btn-primary d-flex justify-content-center">Message</a>
                     </div>
                 </div>
+
             </li>
         </ul>
     </div>
@@ -213,9 +220,8 @@
     </div>
 
     
-    <!-- javascript -->
+    <!-- JS -->
     <script src= "https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src= "../app.js"></script>
 
      <!--map-->
      <div id="map"></div>
