@@ -106,7 +106,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+                            <br>
                             <!-- link to message page -->
                             <a href="#" class="btn btn-primary d-flex justify-content-center">Message</a>
                         </div>
@@ -146,7 +146,7 @@
                                     </div>
                                     <div class="col-xs-6 col-sm-6 col-md-6">
                                         <span class="spanFont"> STUDENT LOCATION</span>
-                                        <p class="footerText">Hougang,Sinagpore</p>
+                                        <p class="footerText">Hougang,Singapore</p>
                                     </div>
                                 </div>
                             </div>
@@ -189,7 +189,7 @@
                                     </div>
                                     <div class="col-xs-6 col-sm-6 col-md-6">
                                         <span class="spanFont"> STUDENT LOCATION</span>
-                                        <p class="footerText">Hougang,Sinagpore</p>
+                                        <p class="footerText">Labrador Park,Singapore</p>
                                     </div>
                                 </div>
                             </div>
@@ -232,7 +232,7 @@
                                     </div>
                                     <div class="col-xs-6 col-sm-6 col-md-6">
                                         <span class="spanFont"> STUDENT LOCATION</span>
-                                        <p class="footerText">Hougang,Sinagpore</p>
+                                        <p class="footerText">Pioneer,Singapore</p>
                                     </div>
                                 </div>
                             </div>
@@ -275,7 +275,7 @@
                                     </div>
                                     <div class="col-xs-6 col-sm-6 col-md-6">
                                         <span class="spanFont"> STUDENT LOCATION</span>
-                                        <p class="footerText">Hougang,Sinagpore</p>
+                                        <p class="footerText">Pasir Ris,Singapore</p>
                                     </div>
                                 </div>
                             </div>
@@ -318,7 +318,7 @@
                                     </div>
                                     <div class="col-xs-6 col-sm-6 col-md-6">
                                         <span class="spanFont"> STUDENT LOCATION</span>
-                                        <p class="footerText">Hougang,Sinagpore</p>
+                                        <p class="footerText">Hillview,Singapore</p>
                                     </div>
                                 </div>
                             </div>
@@ -356,65 +356,74 @@
             //  [{ lat: 1.32426, lng: 103.953},],
             // ];
             // var clementi = { lat: 1.314350, lng: 103.765240};
-
+    
              var map = new google.maps.Map(document.getElementById("map"), {
-                 zoom: 12,
-                 center: { lat:1.352083,lng:103.819839 },
+                 zoom: 11,
+                 center: { lat:1.352083,lng:103.819836 },
              });
 
              //variable for geocode
              var geocoder = new google.maps.Geocoder();
              
-
               //info window for marker
-                var contentString = '<div id="column1">' +     
-                    '<div class="container-fluid mt-2">' +
-                        '<ul style="list-style-type: none">' +
-                            '<li class="card_list" id="card_list">' +
-                                '<div class="card shadow-sm" style="width: 26rem;">' +
-                                    '<div class="card-body">' +
-                                        '<div class="row">' +
-                                            '<div class="col-md-2">' +
-                                            '<img src="../views/images/placeholder.png" width="50px" height="50px" alt="tutor profile picture" class="profile-pic">' +
-                                            "</div>" +
-                                
-                                            '<div class="col-md-10">' +
-                                            '<h5 class="card-title">Student name</h5>' +
-                                            document.getElementById("name1").innerHTML +
-                                            "</div>" +
-                                            "</div>" +
-                                            "<br>" +
+              var contentString = '<li class="card_list" id="card_list">' +
+                '<div class="card shadow-sm" style="width: 26rem;">' +
+                        
+                    '<div class="card-body">' +
 
-                                            '<div class="tutor-data">' +
-                                            '<div class="row">' +
-                                                '<div class="col-xs-6 col-sm-6 col-md-6">' +
-                                                    '<span class="spanFont">ACADAMIC LEVEL</span>' +
-                                                    document.getElementById("level1").innerHTML +
-                                                    "</div>" +
-                                                    '<div class="col-xs-6 col-sm-6 col-md-6">' +
-                                                        '<span class="spanFont">SUBJECT</span>' +
-                                                        document.getElementById("sub1").innerHTML +
-                                                "</div>" +  
-                                                '<div class="w-100"></div>' +  
-                                                '<div class="col-xs-6 col-sm-6 col-md-6">' +
-                                                    '<span class="spanFont"> PREFFERED PRICE RANGE</span>' +
-                                                    document.getElementById("cost1").innerHTML +
-                                                "</div>" +
-                                                '<div class="col-xs-6 col-sm-6 col-md-6">' +
-                                                    '<span class="spanFont"> STUDENT LOCATION</span>' +
-                                                    document.getElementById("loc1").innerHTML +
-                                                "</div>" +
-                                                "</div>" +
-                                             "</div>" +
                             
-                                        '<a href="#" class="btn btn-primary d-flex justify-content-center">Message</a>' +
-                                                    
-                                        "</div>" +
+                        '<div class="row">' +
+                            '<div class="col-md-2">' +
+                                    
+                                    '<img src="../views/images/placeholder.png" width="50px" height="50px" alt="tutor profile picture" class="profile-pic">' +
+                                "</div>" +
+
+                                
+                                '<div class="col-md-10">' +
+                                    '<h5 class="card-title">Student name</h5>' +
+                                    document.getElementById("name1").innerHTML +
+                                "</div>" +
+                            "</div>" +
+                            "<br>" +
+
+                            '<div class="tutor-data">' +
+
+                                
+                                '<div class="row">' +
+                                    
+                                    '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                        '<span class="spanFont">ACADAMIC LEVEL</span>' +
+                                        document.getElementById("level1").innerHTML +
                                     "</div>" +
-                                "</li>" +
-                            "</ul>" +
+
+                                    '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                        '<span class="spanFont">SUBJECT</span>' +
+                                        document.getElementById("sub1").innerHTML +
+                                    "</div>" +  
+
+                                    '<div class="w-100"></div>' +
+                                    "<br>" +  
+
+                                    
+                                    '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                        '<span class="spanFont"> PREFFERED PRICE RANGE</span>' +
+                                        document.getElementById("cost1").innerHTML +
+                                    "</div>" +
+
+                                    
+                                    '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                        '<span class="spanFont"> STUDENT LOCATION</span>' +
+                                        document.getElementById("loc1").innerHTML +    
+                                    "</div>" +
+                                "</div>" +
+                            "</div>" +
+                            "<br>" +
+                            
+                            '<a href="#" class="btn btn-primary d-flex justify-content-center">Message</a>' +
                         "</div>" +
-                    "</div>" ;
+                    "</div>" +
+                "</li>";
+
 
             //variable for info window
             var infowindow = new google.maps.InfoWindow({
@@ -423,18 +432,385 @@
 
             geocodeAddress(geocoder, map, infowindow);
 
-                //         var marker = new google.maps.Marker({
-                //             position: clementi,
-                //             map,
-                //         });
-                //         marker.addListener("click", () => {
-                //             infowindow.open({
-                //             anchor: marker,
-                //             map,
-                //             shouldFocus: false,
-                //             });
-                //         });
+            // variables lat&lng of addresses to create standard markers
+            var hougang = { lat: 1.3612182, lng: 103.8862529};
+            var labradorpark = { lat: 1.2659151, lng: 103.8032993};
+            var pioneer = { lat: 1.3226154, lng: 103.6789788};
+            var pasirris = { lat: 1.3720937, lng: 103.9473728};
+            var hillview = { lat: 1.3630566, lng: 103.7673821};
+            // var woodlands = { lat: 1.4381922, lng: 103.7889597};
+            // var newton = { lat: 1.3075517, lng: 103.8403765};
+            // var lavender = { lat: 1.3073256, lng: 103.8629486};
+            // var bukitgombak = { lat: 1.3641667, lng: 103.7572222};
+                         
+                        //variables to mark the position
+                        var markerzero = new google.maps.Marker({
+                            position: hougang,
+                            map,
+                        });
+                        var markerone = new google.maps.Marker({
+                            position: labradorpark,
+                            map,
+                        });
+                        var markertwo = new google.maps.Marker({
+                            position: pioneer,
+                            map,
+                        });
+                        var markerthree = new google.maps.Marker({
+                            position: pasirris,
+                            map,
+                        });
+                        var markerfour = new google.maps.Marker({
+                            position: hillview,
+                            map,
+                        });
+                        // var marker5 = new google.maps.Marker({
+                        //     position: woodlands,
+                        //     map,
+                        // });
+                        // var marker6 = new google.maps.Marker({
+                        //     position: newton,
+                        //     map,
+                        // });
+                        // var marker7 = new google.maps.Marker({
+                        //     position: lavender,
+                        //     map,
+                        // });
+                        // var marker8 = new google.maps.Marker({
+                        //     position: bukitgombak,
+                        //     map,
+                        // });
 
+                        //content for info window
+                        var contenthougang = '<li class="card_list" id="card_list">' +
+                            '<div class="card shadow-sm" style="width: 26rem;">' +
+                                    
+                                '<div class="card-body">' +
+
+                                    '<div class="row">' +
+                                        '<div class="col-md-2">' +
+
+                                                '<img src="../views/images/placeholder.png" width="50px" height="50px" alt="tutor profile picture" class="profile-pic">' +
+                                            "</div>" +
+
+                                            '<div class="col-md-10">' +
+                                                '<h5 class="card-title">Student name</h5>' +
+                                            "</div>" +
+                                        "</div>" +
+                                        "<br>" +
+
+                                        '<div class="tutor-data">' +
+
+                                            '<div class="row">' +
+
+                                                '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                                    '<span class="spanFont">ACADAMIC LEVEL</span>' +
+                                                    '<p class="footerText">Grade Of Student</p>' +
+                                                "</div>" +
+
+                                                '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                                    '<span class="spanFont">SUBJECT</span>' +
+                                                    '<p class="footerText">Subject Requested</p>' +
+                                                "</div>" +  
+
+                                                '<div class="w-100"></div>' +
+                                                "<br>" +  
+
+                                                '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                                    '<span class="spanFont"> PREFFERED PRICE RANGE</span>' +
+                                                    '<p class="priceFont">Price</p>' +
+                                                "</div>" +
+
+                                                '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                                    '<span class="spanFont"> STUDENT LOCATION</span>' +
+                                                    '<p class="footerText">Hougang,Singapore</p>' +   
+                                                "</div>" +
+                                            "</div>" +
+                                        "</div>" +
+                                        "<br>" +
+
+                                        '<a href="#" class="btn btn-primary d-flex justify-content-center">Message</a>' +
+                                    "</div>" +
+                                "</div>" +
+                            "</li>";
+
+                        var infowindowh = new google.maps.InfoWindow({
+                        content: contenthougang,
+                        });
+
+                        // to display infowindow when clicked on markers
+                        markerzero.addListener("click", () => {
+                            infowindowh.open({
+                            anchor: markerzero,
+                            map,
+                            shouldFocus: false,
+                            });
+                        });
+                        
+                        //content for info window
+                        var contentlabradorpark = '<li class="card_list" id="card_list">' +
+                            '<div class="card shadow-sm" style="width: 26rem;">' +
+                                    
+                                '<div class="card-body">' +
+
+                                    '<div class="row">' +
+                                        '<div class="col-md-2">' +
+
+                                                '<img src="../views/images/placeholder.png" width="50px" height="50px" alt="tutor profile picture" class="profile-pic">' +
+                                            "</div>" +
+
+                                            '<div class="col-md-10">' +
+                                                '<h5 class="card-title">Student name</h5>' +
+                                            "</div>" +
+                                        "</div>" +
+                                        "<br>" +
+
+                                        '<div class="tutor-data">' +
+
+                                            '<div class="row">' +
+
+                                                '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                                    '<span class="spanFont">ACADAMIC LEVEL</span>' +
+                                                    '<p class="footerText">Grade Of Student</p>' +
+                                                "</div>" +
+
+                                                '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                                    '<span class="spanFont">SUBJECT</span>' +
+                                                    '<p class="footerText">Subject Requested</p>' +
+                                                "</div>" +  
+
+                                                '<div class="w-100"></div>' +
+                                                "<br>" +  
+
+                                                '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                                    '<span class="spanFont"> PREFFERED PRICE RANGE</span>' +
+                                                    '<p class="priceFont">Price</p>' +
+                                                "</div>" +
+
+                                                '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                                    '<span class="spanFont"> STUDENT LOCATION</span>' +
+                                                    '<p class="footerText">Labrador Park,Singapore</p>' +   
+                                                "</div>" +
+                                            "</div>" +
+                                        "</div>" +
+                                        "<br>" +
+
+                                        '<a href="#" class="btn btn-primary d-flex justify-content-center">Message</a>' +
+                                    "</div>" +
+                                "</div>" +
+                            "</li>";
+
+                        var infowindowl = new google.maps.InfoWindow({
+                        content: contentlabradorpark,
+                        });
+
+                        // to display infowindow when clicked on markers
+                        markerone.addListener("click", () => {
+                            infowindowl.open({
+                            anchor: markerone,
+                            map,
+                            shouldFocus: false,
+                            });
+                        });
+                        
+                        //content for info window
+                        var contentpioneer = '<li class="card_list" id="card_list">' +
+                            '<div class="card shadow-sm" style="width: 26rem;">' +
+                                    
+                                '<div class="card-body">' +
+
+                                    '<div class="row">' +
+                                        '<div class="col-md-2">' +
+
+                                                '<img src="../views/images/placeholder.png" width="50px" height="50px" alt="tutor profile picture" class="profile-pic">' +
+                                            "</div>" +
+
+                                            '<div class="col-md-10">' +
+                                                '<h5 class="card-title">Student name</h5>' +
+                                            "</div>" +
+                                        "</div>" +
+                                        "<br>" +
+
+                                        '<div class="tutor-data">' +
+
+                                            '<div class="row">' +
+
+                                                '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                                    '<span class="spanFont">ACADAMIC LEVEL</span>' +
+                                                    '<p class="footerText">Grade Of Student</p>' +
+                                                "</div>" +
+
+                                                '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                                    '<span class="spanFont">SUBJECT</span>' +
+                                                    '<p class="footerText">Subject Requested</p>' +
+                                                "</div>" +  
+
+                                                '<div class="w-100"></div>' +
+                                                "<br>" +  
+
+                                                '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                                    '<span class="spanFont"> PREFFERED PRICE RANGE</span>' +
+                                                    '<p class="priceFont">Price</p>' +
+                                                "</div>" +
+
+                                                '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                                    '<span class="spanFont"> STUDENT LOCATION</span>' +
+                                                    '<p class="footerText">Pioneer,Singapore</p>' +   
+                                                "</div>" +
+                                            "</div>" +
+                                        "</div>" +
+                                        "<br>" +
+
+                                        '<a href="#" class="btn btn-primary d-flex justify-content-center">Message</a>' +
+                                    "</div>" +
+                                "</div>" +
+                            "</li>";
+
+                        var infowindowp = new google.maps.InfoWindow({
+                        content: contentpioneer,
+                        });
+
+                        // to display infowindow when clicked on markers
+                        markertwo.addListener("click", () => {
+                            infowindowp.open({
+                            anchor: markertwo,
+                            map,
+                            shouldFocus: false,
+                            });
+                        });
+                        
+                        //content for info window
+                        var contentpasirris = '<li class="card_list" id="card_list">' +
+                            '<div class="card shadow-sm" style="width: 26rem;">' +
+                                    
+                                '<div class="card-body">' +
+
+                                    '<div class="row">' +
+                                        '<div class="col-md-2">' +
+
+                                                '<img src="../views/images/placeholder.png" width="50px" height="50px" alt="tutor profile picture" class="profile-pic">' +
+                                            "</div>" +
+
+                                            '<div class="col-md-10">' +
+                                                '<h5 class="card-title">Student name</h5>' +
+                                            "</div>" +
+                                        "</div>" +
+                                        "<br>" +
+
+                                        '<div class="tutor-data">' +
+
+                                            '<div class="row">' +
+
+                                                '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                                    '<span class="spanFont">ACADAMIC LEVEL</span>' +
+                                                    '<p class="footerText">Grade Of Student</p>' +
+                                                "</div>" +
+
+                                                '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                                    '<span class="spanFont">SUBJECT</span>' +
+                                                    '<p class="footerText">Subject Requested</p>' +
+                                                "</div>" +  
+
+                                                '<div class="w-100"></div>' +
+                                                "<br>" +  
+
+                                                '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                                    '<span class="spanFont"> PREFFERED PRICE RANGE</span>' +
+                                                    '<p class="priceFont">Price</p>' +
+                                                "</div>" +
+
+                                                '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                                    '<span class="spanFont"> STUDENT LOCATION</span>' +
+                                                    '<p class="footerText">Pasir Ris,Singapore</p>' +   
+                                                "</div>" +
+                                            "</div>" +
+                                        "</div>" +
+                                        "<br>" +
+
+                                        '<a href="#" class="btn btn-primary d-flex justify-content-center">Message</a>' +
+                                    "</div>" +
+                                "</div>" +
+                            "</li>";
+
+                        var infowindowpa = new google.maps.InfoWindow({
+                        content: contentpasirris,
+                        });
+
+                        // to display infowindow when clicked on markers
+                        markerthree.addListener("click", () => {
+                            infowindowpa.open({
+                            anchor: markerthree,
+                            map,
+                            shouldFocus: false,
+                            });
+                        });
+                        
+                        //content for info window
+                        var contenthillview = '<li class="card_list" id="card_list">' +
+                            '<div class="card shadow-sm" style="width: 26rem;">' +
+                                    
+                                '<div class="card-body">' +
+
+                                    '<div class="row">' +
+                                        '<div class="col-md-2">' +
+
+                                                '<img src="../views/images/placeholder.png" width="50px" height="50px" alt="tutor profile picture" class="profile-pic">' +
+                                            "</div>" +
+
+                                            '<div class="col-md-10">' +
+                                                '<h5 class="card-title">Student name</h5>' +
+                                            "</div>" +
+                                        "</div>" +
+                                        "<br>" +
+
+                                        '<div class="tutor-data">' +
+
+                                            '<div class="row">' +
+
+                                                '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                                    '<span class="spanFont">ACADAMIC LEVEL</span>' +
+                                                    '<p class="footerText">Grade Of Student</p>' +
+                                                "</div>" +
+
+                                                '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                                    '<span class="spanFont">SUBJECT</span>' +
+                                                    '<p class="footerText">Subject Requested</p>' +
+                                                "</div>" +  
+
+                                                '<div class="w-100"></div>' +
+                                                "<br>" +  
+
+                                                '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                                    '<span class="spanFont"> PREFFERED PRICE RANGE</span>' +
+                                                    '<p class="priceFont">Price</p>' +
+                                                "</div>" +
+
+                                                '<div class="col-xs-6 col-sm-6 col-md-6">' +
+                                                    '<span class="spanFont"> STUDENT LOCATION</span>' +
+                                                    '<p class="footerText">Hillview,Singapore</p>' +   
+                                                "</div>" +
+                                            "</div>" +
+                                        "</div>" +
+                                        "<br>" +
+
+                                        '<a href="#" class="btn btn-primary d-flex justify-content-center">Message</a>' +
+                                    "</div>" +
+                                "</div>" +
+                            "</li>";
+
+                        var infowindowhi = new google.maps.InfoWindow({
+                        content: contenthillview,
+                        });
+
+                        // to display infowindow when clicked on markers
+                        markerfour.addListener("click", () => {
+                            infowindowhi.open({
+                            anchor: markerfour,
+                            map,
+                            shouldFocus: false,
+                            });
+                        });
+       
         }
 
  
