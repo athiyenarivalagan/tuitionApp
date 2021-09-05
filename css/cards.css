@@ -8,14 +8,13 @@
 }
 
 /* profile card styling */
-
 .spanFont {
   color: darkgray;
   font-weight: 500;
   font-size: 12px;
 }
 
-p {
+.footerText {
   font-weight: 500;
   font-size: 13px;
 }
@@ -26,10 +25,14 @@ p {
     font: size 16px;
 }
 
+/* container spacing */
+.container-fluid {
+  margin-top: 70px;
+}
+
 /* card spacing */
 .card-list {
   display: flex;
-  /* padding: 0 30px; */
 }
 
 
