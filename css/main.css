@@ -24,7 +24,7 @@ body, html {
 .bg {
 
     /* image used */
-    background-image: url("../views/images/carousel3.jpg");
+    background-image: url("../views/images/background.jpg");
     
     /* Full height */
     height: 100%;
@@ -47,6 +47,6 @@ body, html {
 }
 
 /* social media icon styling */
-i {
-    color: gray; 
+strong {
+    color: black; 
  }

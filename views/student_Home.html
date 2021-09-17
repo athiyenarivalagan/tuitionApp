@@ -1,12 +1,15 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
+	<title>Welcome to MyTutor - Welcome, Student</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
     <!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- CSS -->
-    <link rel="stylesheet" href="../css/tHome.css">
+    <!--CSS-->
+    <link rel="stylesheet" href="../css/student_Home.css">
     <link rel="stylesheet" href="../css/main.css">
     <!-- Font Awesome Icon Library -->
     <script src="https://kit.fontawesome.com/1c9222c777.js"></script>
@@ -26,7 +29,7 @@
 
                 <!-- app logo -->
                 <div class="col-4 d-flex justify-content-center align-items-center">
-                    <img src="images/logo.png" alt="app logo" id="logo">
+                    <img src="images/logo.png" alt="MyTutor logo" id="logo">
                     <h3 id="navTitle">MyTutor</h3>
                 </div>
 
@@ -39,18 +42,18 @@
         </header>
     </div>
     <!-- end of header -->
- 
+
     <!--background-->
     <div class="bg">
         <!--Transition buttons-->
         <!-- added background blur effect -->
-        <div class = "transition buttons">
-            <div class="container container-fluid mt-5" style="backdrop-filter: blur(2px);">
-                <!-- page header -->
-                <p class="h1 text-center pt-4">Tutor Home</p>
-                <a href="tUpdateProfile.html" class="btn d-flex mt-4" id="transBtnBlue" role="button">Update Profile</a>
-                <a href="FindAStudent.html" class="btn d-flex mt-5" id="transBtnBlue" role="button">Find a Student</a>
-                <a href="#" class="btn d-flex mt-5" id="transBtnBlue" role="button">Chat with Student</a>
+        <div class="transition buttons" style="backdrop-filter: blur(2px);">
+            <div class="container container-fluid mt-5">
+            <!-- page header -->
+            <p class="h1 text-center pt-4">Student Home</p>
+            <a href="student_Profile.html" class="btn d-flex mt-4" id="transBtnGreen" role="button">Update Profile</a>
+            <a href="student_TutorMap.html" class="btn d-flex mt-5" id="transBtnGreen" role="button">Find A Tutor</a>
+            <!-- a href="#" class="btn d-flex mt-5" id="transBtnGreen" role="button">Request for tutor</a --> <!-- removed as functionality is not part of MVP --> 
             </div>
         </div>
     </div>
@@ -78,31 +81,31 @@
                             <!-- facebook -->
                             <li class="list-inline-item">
                                 <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.facebook.com/"  target="_blank">
-                                    <i class="fab fa-facebook"></i>
+                                    <strong class="fab fa-facebook"></strong>
                                 </a>
                             </li>
                             <!-- microsoft outlook -->
                             <li class="list-inline-item">
                                 <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://outlook.live.com/"  target="_blank">
-                                    <i class="fas fa-envelope"></i>
+                                    <strong class="fas fa-envelope"></strong>
                                 </a>
                             </li>
                             <!-- twitter -->
                             <li class="list-inline-item">
                                 <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://twitter.com/?lang=en"  target="_blank">
-                                    <i class="fab fa-twitter"></i>
+                                    <strong class="fab fa-twitter"></strong>
                                 </a>
                             </li>
                             <!-- linkedin -->
                             <li class="list-inline-item">
                                 <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.linkedin.com/feed/" target="_blank">
-                                    <i class="fab fa-linkedin"></i>
+                                    <strong class="fab fa-linkedin"></strong>
                                 </a>
                             </li>
                             <!-- instagram -->
                             <li class="list-inline-item">
                                 <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.instagram.com/"  target="_blank">
-                                    <i class="fab fa-instagram"></i>
+                                    <strong class="fab fa-instagram"></strong>
                                 </a>
                             </li>
                         </ul>
@@ -132,9 +135,9 @@
     <!-- end of footer -->
 
 
-    <!--js bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-
+  <!--js bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    
 
 </body>    
 </html>
