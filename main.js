@@ -7,7 +7,7 @@ function createWindow() {
         height: 800, //temp
 		autoHideMenuBar: true // Hide the menubar as a default, use 'alt' to enable.
     })
-    //win.webContents.openDevTools() // enable dev tools within electron.
+    // win.webContents.openDevTools() // enable dev tools within electron.
     win.loadFile('views/index.html')
 }
 
