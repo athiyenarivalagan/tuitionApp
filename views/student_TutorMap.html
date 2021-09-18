@@ -547,6 +547,13 @@
 
             geocodeAddress(geocoder, map, infowindow);
 
+            lastWindow=null;
+            lastWindowa=null;
+            lastWindowb=null;
+            lastWindowc=null;
+            lastWindowd=null;
+            lastWindowe=null;
+
             // variables lat&lng of addresses to create standard markers
             var addressa ={ lat: 1.3124268, lng: 103.7192448 };
             var addressb ={ lat: 1.3720602, lng: 103.8241495 };
@@ -634,11 +641,23 @@
             
             // to display infowindow when clicked on markers
             pointer.addListener("click", () => {
+                if (lastWindow) lastWindow.close();
+                if (lastWindowa) lastWindowa.close();
+                if (lastWindowb) lastWindowb.close();
+                if (lastWindowc) lastWindowc.close();
+                if (lastWindowd) lastWindowd.close();
+                if (lastWindowe) lastWindowe.close();
                 infowindowa.open({
                 anchor: pointer,
                 map,
                 shouldFocus: false,
                 });
+                lastWindow=infowindow;
+                lastWindowa=infowindowa;
+                lastWindowb=infowindowb;
+                lastWindowc=infowindowc;
+                lastWindowd=infowindowd;
+                lastWindowe=infowindowe;
             });
 
             //content for info window
@@ -695,11 +714,23 @@
             
             // to display infowindow when clicked on markers
             pointerone.addListener("click", () => {
+                if (lastWindow) lastWindow.close();
+                if (lastWindowa) lastWindowa.close();
+                if (lastWindowb) lastWindowb.close();
+                if (lastWindowc) lastWindowc.close();
+                if (lastWindowd) lastWindowd.close();
+                if (lastWindowe) lastWindowe.close();
                 infowindowb.open({
                 anchor: pointerone,
                 map,
                 shouldFocus: false,
                 });
+                lastWindow=infowindow;
+                lastWindowa=infowindowa;
+                lastWindowb=infowindowb;
+                lastWindowc=infowindowc;
+                lastWindowd=infowindowd;
+                lastWindowe=infowindowe;
             });
 
             //content for info window
@@ -756,11 +787,23 @@
             
             // to display infowindow when clicked on markers
             pointertwo.addListener("click", () => {
+                if (lastWindow) lastWindow.close();
+                if (lastWindowa) lastWindowa.close();
+                if (lastWindowb) lastWindowb.close();
+                if (lastWindowc) lastWindowc.close();
+                if (lastWindowd) lastWindowd.close();
+                if (lastWindowe) lastWindowe.close();
                 infowindowc.open({
                 anchor: pointertwo,
                 map,
                 shouldFocus: false,
                 });
+                lastWindow=infowindow;
+                lastWindowa=infowindowa;
+                lastWindowb=infowindowb;
+                lastWindowc=infowindowc;
+                lastWindowd=infowindowd;
+                lastWindowe=infowindowe;
             });
 
             //content for info window
@@ -817,11 +860,23 @@
             
             // to display infowindow when clicked on markers
             pointerthree.addListener("click", () => {
+                if (lastWindow) lastWindow.close();
+                if (lastWindowa) lastWindowa.close();
+                if (lastWindowb) lastWindowb.close();
+                if (lastWindowc) lastWindowc.close();
+                if (lastWindowd) lastWindowd.close();
+                if (lastWindowe) lastWindowe.close();
                 infowindowd.open({
                 anchor: pointerthree,
                 map,
                 shouldFocus: false,
                 });
+                lastWindow=infowindow;
+                lastWindowa=infowindowa;
+                lastWindowb=infowindowb;
+                lastWindowc=infowindowc;
+                lastWindowd=infowindowd;
+                lastWindowe=infowindowe;
             });
 
             //content for info window
@@ -878,11 +933,23 @@
             
             // to display infowindow when clicked on markers
             pointerfour.addListener("click", () => {
+                if (lastWindow) lastWindow.close();
+                if (lastWindowa) lastWindowa.close();
+                if (lastWindowb) lastWindowb.close();
+                if (lastWindowc) lastWindowc.close();
+                if (lastWindowd) lastWindowd.close();
+                if (lastWindowe) lastWindowe.close();
                 infowindowe.open({
                 anchor: pointerfour,
                 map,
                 shouldFocus: false,
                 });
+                lastWindow=infowindow;
+                lastWindowa=infowindowa;
+                lastWindowb=infowindowb;
+                lastWindowc=infowindowc;
+                lastWindowd=infowindowd;
+                lastWindowe=infowindowe;
             });
 
         }
@@ -902,11 +969,19 @@
 
                 // to create infowindow on clcik
                 marker.addListener("click", () => {
+                    if (lastWindow) lastWindow.close();
+                    if (lastWindowa) lastWindowa.close();
+                    if (lastWindowb) lastWindowb.close();
+                    if (lastWindowc) lastWindowc.close();
+                    if (lastWindowd) lastWindowd.close();
+                    if (lastWindowe) lastWindowe.close();
                 infowindow.open({
                  anchor: marker,
                  map: resultsMap,
                  shouldFocus: false,
                  });
+                 lastWindow=infowindow;
+                 
                 });
                 //geocodePosition(marker.getPosition(), infowindow);
             })
