@@ -63,7 +63,7 @@
 
                                 <!-- student name -->
                                 <div class="col-md-10">
-                                    
+                                    <h5 class="card-title">Student Name</h5>
                                     <span id="name1">
                                 </div>
                             </div>
@@ -101,8 +101,6 @@
                                         <span class="spanFont"> STUDENT LOCATION</span>
                                         <span id="loc1">
                                         <p class="footerText">Student Location(nearest Mrt)</p>    
-                                        <!-- <div id ="loc">
-                                        <p>Clementi,Singapore</p> -->
                                     </div>
                                 </div>
                             </div>
@@ -350,12 +348,6 @@
             document.getElementById("level1").innerHTML = localStorage.getItem("textvalue8");
             document.getElementById("sub1").innerHTML = localStorage.getItem("textvalue9");
             document.getElementById("cost1").innerHTML = localStorage.getItem("textvalue10");
-         //  const clementi =[ 
-            //  [{ lat: 1.314350, lng: 103.765240},],    
-            //  [{ lat: 103.765240, lng: 103.893650},],    
-            //  [{ lat: 1.32426, lng: 103.953},],
-            // ];
-            // var clementi = { lat: 1.314350, lng: 103.765240};
     
              var map = new google.maps.Map(document.getElementById("map"), {
                  zoom: 11,
@@ -431,7 +423,8 @@
             });
 
             geocodeAddress(geocoder, map, infowindow);
-
+            
+            //variable for the closure of infowindows
             lastWindow=null;
             lastWindowh=null;
             lastWindowl=null;
@@ -445,10 +438,6 @@
             var pioneer = { lat: 1.3226154, lng: 103.6789788};
             var pasirris = { lat: 1.3720937, lng: 103.9473728};
             var hillview = { lat: 1.3630566, lng: 103.7673821};
-            // var woodlands = { lat: 1.4381922, lng: 103.7889597};
-            // var newton = { lat: 1.3075517, lng: 103.8403765};
-            // var lavender = { lat: 1.3073256, lng: 103.8629486};
-            // var bukitgombak = { lat: 1.3641667, lng: 103.7572222};
                          
                         //variables to mark the position
                         var markerzero = new google.maps.Marker({
@@ -471,22 +460,7 @@
                             position: hillview,
                             map,
                         });
-                        // var marker5 = new google.maps.Marker({
-                        //     position: woodlands,
-                        //     map,
-                        // });
-                        // var marker6 = new google.maps.Marker({
-                        //     position: newton,
-                        //     map,
-                        // });
-                        // var marker7 = new google.maps.Marker({
-                        //     position: lavender,
-                        //     map,
-                        // });
-                        // var marker8 = new google.maps.Marker({
-                        //     position: bukitgombak,
-                        //     map,
-                        // });
+                       
 
                         //content for info window
                         var contenthougang = '<li class="card_list" id="card_list">' +
@@ -547,6 +521,7 @@
 
                         // to display infowindow when clicked on markers
                         markerzero.addListener("click", () => {
+                            //to ensure one infowindow closes when another marker is clicked on
                             if(lastWindow) lastWindow.close();
                             if(lastWindowh) lastWindowh.close();
                             if(lastWindowl) lastWindowl.close();
@@ -626,6 +601,7 @@
 
                         // to display infowindow when clicked on markers
                         markerone.addListener("click", () => {
+                            //to ensure one infowindow closes when another marker is clicked on
                             if(lastWindow) lastWindow.close();
                             if(lastWindowh) lastWindowh.close();
                             if(lastWindowl) lastWindowl.close();
@@ -704,6 +680,7 @@
 
                         // to display infowindow when clicked on markers
                         markertwo.addListener("click", () => {
+                            //to ensure one infowindow closes when another marker is clicked on
                             if(lastWindow) lastWindow.close();
                             if(lastWindowh) lastWindowh.close();
                             if(lastWindowl) lastWindowl.close();
@@ -782,6 +759,7 @@
 
                         // to display infowindow when clicked on markers
                         markerthree.addListener("click", () => {
+                            //to ensure one infowindow closes when another marker is clicked on
                             if(lastWindow) lastWindow.close();
                             if(lastWindowh) lastWindowh.close();
                             if(lastWindowl) lastWindowl.close();
@@ -860,6 +838,7 @@
 
                         // to display infowindow when clicked on markers
                         markerfour.addListener("click", () => {
+                            //to ensure one infowindow closes when another marker is clicked on
                             if(lastWindow) lastWindow.close();
                             if(lastWindowh) lastWindowh.close();
                             if(lastWindowl) lastWindowl.close();
@@ -897,6 +876,7 @@
 
                  // to create infowindow on clcik
                 marker.addListener("click", () => {
+                    //to ensure one infowindow closes when another marker is clicked on
                     if(lastWindow) lastWindow.close();
                     if(lastWindowh) lastWindowh.close();
                     if(lastWindowl) lastWindowl.close();

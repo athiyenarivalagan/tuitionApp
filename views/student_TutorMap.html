@@ -64,6 +64,7 @@
 
                                 <!-- Tutor name -->
                                 <div class="col-md-10">
+                                    <h5 class="card-title">Tutor Name</h5>
                                     <span id="name">
                                 </div>
                             </div>
@@ -467,14 +468,6 @@
          document.getElementById("level").innerHTML = localStorage.getItem("textvalue4");
          document.getElementById("sub").innerHTML = localStorage.getItem("textvalue5");
          document.getElementById("cost").innerHTML = localStorage.getItem("textvalue6");
-         
-
-        //  const bishan =[ 
-        //  [{ lat: 1.352480, lng: 103.944611},],    
-        //  [{ lat: 1.436050, lng: 103.786057},],    
-        //  [{ lat: 1.350400, lng: 103.848750},],
-        // ];
-            //var bishan = { lat: 1.350400, lng: 103.848750};
         
             var map = new google.maps.Map(document.getElementById("map"), {
                 zoom: 11,
@@ -546,7 +539,8 @@
             });
 
             geocodeAddress(geocoder, map, infowindow);
-
+            
+            //variable for the closure of infowindows
             lastWindow=null;
             lastWindowa=null;
             lastWindowb=null;
@@ -560,10 +554,6 @@
             var addressc ={ lat: 1.299307,  lng: 103.88535 };
             var addressd ={ lat: 1.3485394, lng: 103.754694 };
             var addresse ={ lat: 1.3899936, lng: 103.7784502 };
-            // var addressf ={ lat: 1.3124268, lng: 103.7192448 };
-            // var addressg ={ lat: 1.3124268, lng: 103.7192448 };
-            // var addressh ={ lat: 1.3124268, lng: 103.7192448 };
-            // var addressi ={ lat: 1.3124268, lng: 103.7192448 };
 
             //variables to mark the position
             var pointer = new google.maps.Marker({
@@ -641,6 +631,7 @@
             
             // to display infowindow when clicked on markers
             pointer.addListener("click", () => {
+                //to ensure one infowindow closes when another marker is clicked on
                 if (lastWindow) lastWindow.close();
                 if (lastWindowa) lastWindowa.close();
                 if (lastWindowb) lastWindowb.close();
@@ -714,6 +705,7 @@
             
             // to display infowindow when clicked on markers
             pointerone.addListener("click", () => {
+                //to ensure one infowindow closes when another marker is clicked on
                 if (lastWindow) lastWindow.close();
                 if (lastWindowa) lastWindowa.close();
                 if (lastWindowb) lastWindowb.close();
@@ -787,6 +779,7 @@
             
             // to display infowindow when clicked on markers
             pointertwo.addListener("click", () => {
+                //to ensure one infowindow closes when another marker is clicked on
                 if (lastWindow) lastWindow.close();
                 if (lastWindowa) lastWindowa.close();
                 if (lastWindowb) lastWindowb.close();
@@ -860,6 +853,7 @@
             
             // to display infowindow when clicked on markers
             pointerthree.addListener("click", () => {
+                //to ensure one infowindow closes when another marker is clicked on
                 if (lastWindow) lastWindow.close();
                 if (lastWindowa) lastWindowa.close();
                 if (lastWindowb) lastWindowb.close();
@@ -933,6 +927,7 @@
             
             // to display infowindow when clicked on markers
             pointerfour.addListener("click", () => {
+                //to ensure one infowindow closes when another marker is clicked on
                 if (lastWindow) lastWindow.close();
                 if (lastWindowa) lastWindowa.close();
                 if (lastWindowb) lastWindowb.close();
@@ -969,6 +964,7 @@
 
                 // to create infowindow on clcik
                 marker.addListener("click", () => {
+                    //to ensure one infowindow closes when another marker is clicked on
                     if (lastWindow) lastWindow.close();
                     if (lastWindowa) lastWindowa.close();
                     if (lastWindowb) lastWindowb.close();
@@ -983,7 +979,6 @@
                  lastWindow=infowindow;
                  
                 });
-                //geocodePosition(marker.getPosition(), infowindow);
             })
 
         }
