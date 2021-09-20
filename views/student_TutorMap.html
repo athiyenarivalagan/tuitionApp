@@ -459,7 +459,8 @@
 
     <!-- javascript for map api and geocoding api -->
     <script>
-
+        try 
+        {
         //initialize the map
         function initMap() {
          document.getElementById("loc").innerHTML = localStorage.getItem("textvalue");
@@ -948,6 +949,9 @@
             });
 
         }
+    } catch(err) {
+        console.log("Something went wrong while loading the map api..");
+    }
 
         //to geocode the address and create marker
         function geocodeAddress(geocoder, resultsMap, infowindow) {

@@ -342,7 +342,9 @@
      <script>
  
          //initialize the map
-         function initMap() {
+         try 
+         {
+             function initMap() {
             document.getElementById("loc1").innerHTML = localStorage.getItem("textvalue1");
             document.getElementById("name1").innerHTML = localStorage.getItem("textvalue7");
             document.getElementById("level1").innerHTML = localStorage.getItem("textvalue8");
@@ -858,7 +860,10 @@
                             lastWindowhi=infowindowhi;
                         });
        
-        }
+            }
+    } catch(err) {
+        console.log("Something went wrong while loading the map api..");
+    }
 
  
          //to geocode the address and create marker 

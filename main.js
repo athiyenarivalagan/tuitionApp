@@ -3,11 +3,11 @@ const { app, BrowserWindow } = require('electron')
 // create a browser windows loading the html file.
 function createWindow() {
     const win = new BrowserWindow({
-        width: 1000, //temp
+        width: 600, //temp
         height: 800, //temp
-		autoHideMenuBar: true // Hide the menubar as a default, use 'alt' to enable.
+        autoHideMenuBar: true // Hide the menubar as a default, use 'alt' to enable.
     })
-    // win.webContents.openDevTools() // enable dev tools within electron.
+    win.webContents.openDevTools() // enable dev tools within electron.
     win.loadFile('views/index.html')
 }
 
